@@ -1,0 +1,12 @@
+:root{
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --red-100-color: #fc415b;
+    --yello-color: #e3ca6a;
+    --red-900-color: #140606;
+}
+.page1{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary-color);
+}
