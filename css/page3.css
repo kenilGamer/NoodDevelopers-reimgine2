@@ -1,0 +1,49 @@
+:root {
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+  --red-100-color: #fc415b;
+  --yello-color: #e3ca6a;
+  --red-900-color: #140606;
+}
+@font-face {
+  font-family: font1;
+  src: url(/public/AmericanCaptain-MdEY.ttf);
+}
+@font-face {
+  font-family: font2;
+  src: url(/public/SdAsteroidB612-wo3e2.otf);
+}
+.page3 {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(-45deg,var(--red-900-color) 50%,var(--primary-color) 50%);
+  padding: 1.5%;
+}
+.page3-a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.page3-l{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page3-r{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.page3img{
+    width: 40vw;
+    position: absolute;
+    rotate: 10deg;
+    z-index: 10;  
+}

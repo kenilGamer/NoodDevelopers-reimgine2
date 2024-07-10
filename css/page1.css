@@ -5,8 +5,34 @@
     --yello-color: #e3ca6a;
     --red-900-color: #140606;
 }
+@font-face {
+    font-family: font1;
+    src: url(/public/AmericanCaptain-MdEY.ttf);
+}
+@font-face {
+    font-family: font2;
+    src: url(/public/SdAsteroidB612-wo3e2.otf);
+}
 .page1{
     width: 100%;
     height: 100vh;
-    background-color: var(--primary-color);
+    background: linear-gradient(-45deg, rgba(173,17,17,1) 50%, rgb(35, 186, 197) 50%);
+}
+.nav{
+    font-family: font1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4vh 3vw;
+    font-size: 2vw;
+}
+.nav a{
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+.nav a img{
+    width: 20vw;
+}
+.nav a:hover{
+    color: var(--red-100-color);
 }
