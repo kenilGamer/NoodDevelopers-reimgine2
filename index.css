@@ -24,6 +24,6 @@ html , body{
     position: fixed;
     z-index: 10; 
     rotate: 10deg; 
-    left: 40%;
+    /* left: 30%; */
     z-index: 10;
 }

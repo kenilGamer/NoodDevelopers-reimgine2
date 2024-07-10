@@ -48,6 +48,11 @@
     z-index: 119;
     -webkit-text-stroke: #e3ca6a 1.6px;
 }
+.span-n{
+    /* font-family: font2; */
+    font-size: 4vw;
+    font-weight: 500;
+}
 .page3 {
     /* position: relative; */
   width: 100%;
@@ -65,10 +70,22 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+    /* justify-content: center; */
+    padding: 10%;
+    font-family: font2;
 
+    /* background: #fc415b; */
+}
+.page3-l h1{
+    color: #e3ca6a;
+    font-size: 4.5vw;
+}
+.page3-l p{
+    /* color: #e3ca6a; */
+    margin-top: 30px;
+    width: 37vw;
+    font-size: 2.5vw;
+}
 .page3-r{
     width: 40%;
     height: 100%;

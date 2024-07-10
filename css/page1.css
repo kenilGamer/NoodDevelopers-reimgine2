@@ -16,11 +16,23 @@
 .page1{
     width: 100%;
     height: 100vh;
-    background:#8a6363;
+    background:#000000;
     position: relative;
     z-index: 100;
+    overflow: hidden;
+    
 }
+.page1 video{
+    position: absolute;
+
+    width: 100vw;
+    height: 100v; 
+
+}
+/* .navbar{} */
 .nav{
+    z-index: 99999;
+    position: relative;
     font-family: font1;
     display: flex;
     align-items: center;
