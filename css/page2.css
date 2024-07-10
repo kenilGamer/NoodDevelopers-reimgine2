@@ -14,7 +14,7 @@
     src: url(/public/SdAsteroidB612-wo3e2.ttf);
 }
 .page2{
-    
+    position: relative;
     width: 100%;
     height: 100vh;
     background-color: var(--primary-color);

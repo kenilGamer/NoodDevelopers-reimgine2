@@ -7,7 +7,7 @@ html , body{
     height: 100%;
     width: 100%;
     color: #ffffff;
-    background-color: #000000;
+    background-color: #cfcccc;
 }
 /* ::-webkit-scrollbar{
     width: 5px;
@@ -18,4 +18,8 @@ html , body{
     --red-100-color: #fc415b;
     --yello-color: #e3ca6a;
     --red-900-color: #140606;
+}
+#main {
+  position: relative;
+  overflow: hidden;
 }
