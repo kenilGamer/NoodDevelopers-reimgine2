@@ -13,12 +13,13 @@
     font-family: font2;
     src: url(/public/SdAsteroidB612-wo3e2.ttf);
 }
+.page2-3{
+    background-color: var(--red-100-color);
+    position: relative;
+}
 .page2{
-    position: relative;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    background-color: var(--primary-color);
-    position: relative;
 }
 .texts1{
     width: 100%;
@@ -27,26 +28,58 @@
     justify-content: center;
     align-items: center;
 }
-.page1img{
-    width: 30vw;
-    position: absolute;
-    z-index: 10; 
-    rotate: 10deg; 
-}
+
 .text-121a{
     color: #e3ca6a;
     z-index: 9;
+    position: absolute;
+
 }
 .text-aa{
     font-family: font2;
     font-size: 30vw;
     font-weight: 900;
-    position: absolute;
 }
 .texts{
+    position: absolute;
     
     color: transparent;
     /* text-shadow: 0px 0px 0px 2px #e3ca6a; */
-    z-index: 11;
+    z-index: 119;
     -webkit-text-stroke: #e3ca6a 1.6px;
+}
+.page3 {
+    /* position: relative; */
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(-45deg,var(--red-900-color) 50%,var(--primary-color) 50%);
+  padding: 1.5%;
+}
+.page3-a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.page3-l{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page3-r{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.page3img{
+    width: 40vw;
+    position: absolute;
+    rotate: 10deg;
+    z-index: 10;  
 }

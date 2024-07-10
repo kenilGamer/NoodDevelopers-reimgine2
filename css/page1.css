@@ -18,6 +18,7 @@
     height: 100vh;
     background:#8a6363;
     position: relative;
+    z-index: 100;
 }
 .nav{
     font-family: font1;
