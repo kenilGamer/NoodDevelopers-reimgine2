@@ -16,7 +16,7 @@
 .page1{
     width: 100%;
     height: 100vh;
-    background: linear-gradient(-45deg, rgba(173,17,17,1) 50%, rgb(35, 186, 197) 50%);
+    background: linear-gradient(    45deg, rgba(173,17,17,1) 50%, rgb(35, 186, 197) 50%);
 }
 .nav{
     font-family: font1;

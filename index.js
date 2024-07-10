@@ -30,3 +30,14 @@ ScrollTrigger.scrollerProxy("#main", {
 
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
+
+
+function page1(){
+
+}
+function page2(){
+
+}
+function page3(){
+
+}
