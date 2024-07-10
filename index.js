@@ -74,14 +74,14 @@ function page2(){
         scroller: "#main", // Attach the scroll to the Locomotive Scroll container
         toggleActions: "restart none none reverse",
         start: "top 0%",
-        end: "top -50%",
+        end: "top -80%",
         pin: true,
         // markers: true,
         scrub: 5,
       }
       });
       tl.to(".texts",{
-        duration: 0.4, 
+        duration:1.2, 
         opacity:0,
         scale: 3  
       })
