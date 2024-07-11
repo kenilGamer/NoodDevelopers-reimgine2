@@ -14,7 +14,7 @@
   src: url(/public/SdAsteroidB612-wo3e2.otf);
 }
 .page3 {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background: linear-gradient(-45deg,var(--red-900-color) 50%,var(--primary-color) 50%);
   padding: 1.5%;
@@ -40,6 +40,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 .page3img{
     width: 40vw;
@@ -47,3 +48,5 @@
     rotate: 10deg;
     z-index: 10;  
 }
+
+
