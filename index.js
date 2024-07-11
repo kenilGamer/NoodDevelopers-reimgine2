@@ -112,7 +112,7 @@ function page3(){
       start: "top 30%",
       end: "top -30%",
       // pin: true,
-      markers: true,
+      // markers: true,
       scrub: 5,
     }
     });
