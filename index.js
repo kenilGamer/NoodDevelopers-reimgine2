@@ -96,17 +96,63 @@ function page2(){
       //   opacity:0,
       // })
       tl.to(".page1img",{
-        duration: 2, 
+        duration: 3, 
         top:"120%",
         rotate: 370,
         left: '55%',
         scale: 1.5,
-          
       })
 }
 function page3(){
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".page3-a",
+      scroller: "#main", // Attach the scroll to the Locomotive Scroll container
+      toggleActions: "restart none none reverse",
+      start: "top 30%",
+      end: "top -30%",
+      // pin: true,
+      markers: true,
+      scrub: 5,
+    }
+    });
+    tl.from(".about2121 ",{
+      duration: 3, 
+      opacity:0,
+      y: -100,
+      ease: "power4.inOut"
+    })
+    tl.from(".Cyberstud21",{
+      duration: 3, 
+      opacity:0,
+      x: -100,
+      ease: "power4.inOut"
+    })
+    tl.to(".page1img",{
+      duration: 6, 
+      top:"220%",
+      rotate: 0,
+      left: '35%',
+      scale: 1, 
+    })
+   
+}
+function page4(){
+  // const tl = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: ".page4",
+  //     scroller: "#main", // Attach the scroll to the Locomotive Scroll container
+  //     toggleActions: "restart none none reverse",
+  //     start: "top 0%",
+  //     end: "top -80%",
+  //     pin: true,
+  //     markers: true,
+  //     scrub: 5,
+  //   }
+  //   });
  
 }
 page1()
 page2()
 page3()
+page4()

@@ -19,11 +19,3 @@ html , body{
     --yello-color: #e3ca6a;
     --red-900-color: #140606;
 }
-.page1img{
-    width: 30vw;
-    position: fixed;
-    z-index: 10; 
-    rotate: 10deg; 
-    /* left: 30%; */
-    z-index: 10;
-}
