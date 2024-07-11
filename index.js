@@ -10,8 +10,8 @@ function ls() {
     el: document.querySelector("#main"),
     smooth: true,
     smoothMobile: 0.1,
-    inertia: 0.5,
-    multiplier: 0.9,
+    inertia: 0.4,
+    multiplier: 0.7,
   });
 
   // Sync ScrollTrigger with Locomotive Scroll
@@ -45,26 +45,13 @@ function ls() {
 document.addEventListener("DOMContentLoaded", () => {
   ls();
 
-  const cords = { x: 0, y: 0 };
+ 
+   const cords = { x: 0, y: 0 };
   const circles = document.querySelectorAll(".circle");
-  // const colors = [
-  //   "#000000" ,
-  //   "#000000", 
-  //   "#830066",
-  //   "#9c155f", 
-  //   "#b22c5e", 
-  //   "#c5415d", 
-  //   "#d5585c", 
-  //   "#e36e5c", 
-  //   "#ef865e", 
-  //   "#f89d63",
-  //   "#ffb56b",
-  //   "#1f665c",
-  // ]
-  circles.forEach((circle,index) => {
+
+  circles.forEach((circle, index) => {
     circle.x = 0;
     circle.y = 0;
-    // circle.style.backgroundColor = colors[index % colors.length]
   });
 
   document.addEventListener("mousemove", (e) => {
@@ -81,13 +68,17 @@ document.addEventListener("DOMContentLoaded", () => {
       circle.style.scale = (circles.length - index) / circles.length;
       circle.x = x;
       circle.y = y;
+     
+
       const nextCircle = circles[index + 1] || circles[0];
       x += (nextCircle.x - x) * 0.2;
       y += (nextCircle.y - y) * 0.2;
     });
     requestAnimationFrame(animateCircles);
   }
+
   animateCircles();
+  
   
 
   function page1() {
@@ -135,6 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function page2() {
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".page2",
@@ -207,7 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
       opacity: 0,
       y: -100,
       stagger: 0.1,
-    });
+    }, "-=0.5");
     tl.to(".page1img", {
       duration: 6,
       top: "220%",

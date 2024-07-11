@@ -1,43 +1,82 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-html , body{
-    height: 100%;
-    width: 100%;
-    color: #ffffff;
-    background-color: #000000;
-}
-/* ::-webkit-scrollbar{
-    width: 5px;
-} */
-:root{
+  }
+  
+  :root {
     --primary-color: #000000;
     --secondary-color: #ffffff;
     --red-100-color: #fc415b;
-    --yello-color: #e3ca6a;
+    --yellow-color: #e3ca6a;
     --red-900-color: #140606;
-}
-#main{
-    position: relative;
-}
-.circle{
-    height: 24px;
-    width: 24px;
-    border-radius: 24px;
-    background-color: #ffffff;
-    position: absolute;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    color: #ffffff;
+    cursor: none;
+    background-color: #000000;
+  }
+  
+  .cursor {
+    
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 99;
-    transition: all .1;
-    -webkit-border-radius: 24px;
-    -moz-border-radius: 24px;
-    -ms-border-radius: 24px;
-    -o-border-radius: 24px;
-    -webkit-transition: all .1;
-    -moz-transition: all .1;
-    -ms-transition: all .1;
-    -o-transition: all .1;
-}
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Ensure cursor has the highest z-index */
+    pointer-events: none;
+  }
+  
+  .circle {
+    mix-blend-mode: color;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    position: fixed;
+    pointer-events: none;
+  }
+  
+  .nav {
+    z-index: 100; /* Lower than cursor z-index */
+    position: relative;
+    font-family: font1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4vh 3vw;
+    font-size: 2vw;
+  }
+  
+  .nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+  }
+  
+  .nav a img {
+    width: 20vw;
+  }
+  
+  .nav a:hover {
+    color: var(--red-100-color);
+  }
+  
+  .nav .nav-shop,
+  .nav .nav-all,
+  .nav .nav-img,
+  .nav-daily,
+  .nav-more {
+    position: absolute;
+    left: 45%;
+    opacity: 0;
+  }
+  .nav-img {
+    left: 42%;
+    top: 10px;
+  }
+  
