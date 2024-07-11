@@ -131,7 +131,7 @@ function page3(){
     tl.to(".page1img",{
       duration: 6, 
       top:"220%",
-      rotate: 0,
+      rotate: 20,
       left: '35%',
       scale: 1, 
     })
