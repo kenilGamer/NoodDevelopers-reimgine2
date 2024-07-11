@@ -296,7 +296,7 @@ document.addEventListener("DOMContentLoaded", () => {
   circles.forEach((circle,index) => {
     circle.x = 0;
     circle.y = 0;
-    circle.style.backgroundColor = color[index % colors.length]
+    circle.style.backgroundColor = colors[index % colors.length]
   });
 
   document.addEventListener("mousemove", (e) => {
