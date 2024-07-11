@@ -16,15 +16,15 @@
 .page1{
     width: 100%;
     height: 100vh;
-    background:#000000;
-    position: relative;
-    z-index: 100;
+    /* background:#000000; */
+    /* position: relative; */
+    /* z-index: 100; */
     overflow: hidden;
     
 }
 .page1 video{
     position: absolute;
-
+    z-index: 0;
     width: 100vw;
     height: 100v; 
 
