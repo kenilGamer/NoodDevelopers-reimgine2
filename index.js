@@ -56,8 +56,10 @@ document.addEventListener("DOMContentLoaded", () => {
     cords.y = e.clientY;
   });
   document.addEventListener("touchmove", (e) => {
-    cords.x = e.clientX;
-    cords.y = e.clientY;
+    if (e.touches.length > 0) {
+      cords.x = e.touches[0].clientX;
+      cords.y = e.touches[0].clientY;
+    }
   });
   function animateCircles() {
     let x = cords.x;
