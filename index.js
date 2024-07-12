@@ -14,10 +14,7 @@ function ls() {
     multiplier: 0.7,
   });
 
-  // Sync ScrollTrigger with Locomotive Scroll
   locoScroll.on("scroll", ScrollTrigger.update);
-
-  // Tell ScrollTrigger to use Locomotive Scroll's proxy methods
   ScrollTrigger.scrollerProxy("#main", {
     scrollTop(value) {
       return arguments.length
