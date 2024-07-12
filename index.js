@@ -55,7 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
     cords.x = e.clientX;
     cords.y = e.clientY;
   });
-
+  document.addEventListener("touchmove", (e) => {
+    cords.x = e.clientX;
+    cords.y = e.clientY;
+  });
   function animateCircles() {
     let x = cords.x;
     let y = cords.y;
@@ -78,6 +81,21 @@ document.addEventListener("DOMContentLoaded", () => {
   
   
 
+  const nav = document.querySelector(".nav " );
+  nav.addEventListener("mouseenter",()=>{
+    gsap.to(circles,{
+      scale: 2,
+      duration: .5,
+      // ease: "elastic.out(1, 0.3)"
+    })
+  })
+  nav.addEventListener("mouseleave",()=>{
+    gsap.to(circles,{
+      scale: 1,
+      duration: .5,
+      
+    })
+  })
   function page1() {
     const tl = gsap.timeline();
     tl.to(".nav-img", {
