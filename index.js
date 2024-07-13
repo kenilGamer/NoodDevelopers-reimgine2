@@ -1,10 +1,7 @@
 function ls() {
   ScrollTrigger.normalizeScroll(true);
   ScrollTrigger.defaults({ ignoreMobileResize: true });
-
   gsap.registerPlugin(ScrollTrigger);
-
-  // Initialize Locomotive Scroll
   const locoScroll = new LocomotiveScroll({
     el: document.querySelector("#main"),
     smooth: true,
@@ -32,15 +29,11 @@ function ls() {
       ? "transform"
       : "fixed",
   });
-
-  // Refresh ScrollTrigger and Locomotive Scroll on window resize
   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
   ScrollTrigger.refresh();
 }
-
 document.addEventListener("DOMContentLoaded", () => {
   ls();
-
   function navbar() {
     var right_mobile_nav = document.querySelector(".right_mobile_nav");
     var nav_line_1 = document.querySelector(".nav_line_1");
@@ -106,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-// navbar()
+navbar()
   const cords = { x: 0, y: 0 };
   const circles = document.querySelectorAll(".circle");
 
