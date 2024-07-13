@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-navbar()
+// navbar()
   const cords = { x: 0, y: 0 };
   const circles = document.querySelectorAll(".circle");
 
