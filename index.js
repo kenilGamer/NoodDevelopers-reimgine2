@@ -1,4 +1,3 @@
-
 function ls() {
   ScrollTrigger.normalizeScroll(true);
   ScrollTrigger.defaults({ ignoreMobileResize: true });
@@ -42,8 +41,73 @@ function ls() {
 document.addEventListener("DOMContentLoaded", () => {
   ls();
 
- 
-   const cords = { x: 0, y: 0 };
+  function navbar() {
+    var right_mobile_nav = document.querySelector(".right_mobile_nav");
+    var nav_line_1 = document.querySelector(".nav_line_1");
+    var nav_line_2 = document.querySelector(".nav_line_2");
+    var mobile_nav_ = document.querySelector(".mobile_nav_");
+    var nav = false;
+
+    var mbnav = gsap.timeline();
+    var mbnav_ = gsap.timeline();
+
+    right_mobile_nav.addEventListener("click", () => {
+      if (nav) {
+        nav = false;
+
+        mbnav_.to(
+          nav_line_1,
+          {
+            position: "static",
+            transform: "rotate(0deg)",
+            direction: 1,
+          },
+          "a"
+        );
+        mbnav_.to(
+          nav_line_2,
+          {
+            position: "static",
+            transform: "rotate(0deg)",
+            direction: 1,
+          },
+          "a"
+        );
+        mbnav_.to(mobile_nav_, {
+          right: -100 + "vw",
+        });
+      } else {
+        nav = true;
+        mbnav.to(
+          nav_line_1,
+          {
+            position: "absolute",
+            transform: "rotate(45deg)",
+            direction: 1,
+            zIndex: 100000,
+          },
+          "a"
+        );
+        mbnav.to(
+          nav_line_2,
+          {
+            postion: "absolute",
+            transform: "rotate(-45deg)",
+            zIndex: 100000,
+            direction: 1,
+          },
+          "a"
+        );
+        mbnav_.to(mobile_nav_, {
+          right: 0,
+          ease: "bounce.out",
+          duration: 2.5,
+        });
+      }
+    });
+  }
+navbar()
+  const cords = { x: 0, y: 0 };
   const circles = document.querySelectorAll(".circle");
 
   circles.forEach((circle, index) => {
@@ -70,7 +134,6 @@ document.addEventListener("DOMContentLoaded", () => {
       circle.style.scale = (circles.length - index) / circles.length;
       circle.x = x;
       circle.y = y;
-     
 
       const nextCircle = circles[index + 1] || circles[0];
       x += (nextCircle.x - x) * 0.2;
@@ -80,24 +143,21 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   animateCircles();
-  
-  
 
-  const nav = document.querySelector(".nav " );
-  nav.addEventListener("mouseenter",()=>{
-    gsap.to(circles,{
+  const nav = document.querySelector(".nav ");
+  nav.addEventListener("mouseenter", () => {
+    gsap.to(circles, {
       scale: 2,
-      duration: .5,
+      duration: 0.5,
       // ease: "elastic.out(1, 0.3)"
-    })
-  })
-  nav.addEventListener("mouseleave",()=>{
-    gsap.to(circles,{
+    });
+  });
+  nav.addEventListener("mouseleave", () => {
+    gsap.to(circles, {
       scale: 1,
-      duration: .5,
-      
-    })
-  })
+      duration: 0.5,
+    });
+  });
   function page1() {
     const tl = gsap.timeline();
     tl.to(".nav-img", {
@@ -143,7 +203,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function page2() {
-
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".page2",
@@ -194,7 +253,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     texts();
     texts2();
-    
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".page3-a",
@@ -211,12 +270,16 @@ document.addEventListener("DOMContentLoaded", () => {
       y: -100,
       stagger: 0.1,
     });
-    tl.from(".Cyberstud21 span", {
-      duration: 3,
-      opacity: 0,
-      y: -100,
-      stagger: 0.1,
-    }, "-=0.5");
+    tl.from(
+      ".Cyberstud21 span",
+      {
+        duration: 3,
+        opacity: 0,
+        y: -100,
+        stagger: 0.1,
+      },
+      "-=0.5"
+    );
     tl.to(".page1img", {
       duration: 6,
       top: "220%",
