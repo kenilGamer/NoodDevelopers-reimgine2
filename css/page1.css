@@ -105,7 +105,7 @@
     width: 100%;
     height: 10vw;
     display: flex;
-    background: #69696991;
+    /* background: #69696991; */
     backdrop-filter: blur (10px);
     align-items: center;
     justify-content: space-between;
