@@ -53,7 +53,7 @@
   .page4img {
     width: 35vw;
     position: fixed;
-    z-index: 10;
+    z-index: 100;
   }
   .page5{
     position: relative;
