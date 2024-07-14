@@ -290,11 +290,12 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     });
 
-    tl2.from(".text-about2",{
-      duration: 1.5,
+    tl2.from(".text-about22",{
+      duration: 2,
       opacity: 0,
-      y: 200,
-      ease: "elastic.out(1, 0.3)"
+      y: 100,
+      stagger: 0.4,
+      ease: "elastic.out(1, 0.7)"
     })
 
   }
