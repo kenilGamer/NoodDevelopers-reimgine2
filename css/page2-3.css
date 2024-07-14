@@ -13,10 +13,7 @@
   font-family: font2;
   src: url(/public/SdAsteroidB612-wo3e2.ttf);
 }
-.page2-3 {
-  /* background-color: var(--red-100-color); */
-  /* position: relative; */
-}
+
 .page2 {
   /* background: #000; */
   position: relative;
@@ -58,7 +55,7 @@
 .page3 {
   position: relative;
   z-index: -1;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background: linear-gradient(
     -45deg,
@@ -108,45 +105,32 @@
   z-index: 10;
 }
 
-.page4 {
-  /* background: #000; */
-  width: 100vw;
-  height: 100vh;
-  /* z-index: -1; */
-}
-.texts2 {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.text-121b {
-  color: #e3ca6a;
-  z-index: -9;
-  position: absolute;
-}
-.texts12122 {
-  display: none;
-}
-.text-aa1 {
-  font-family: font2;
-  font-size: 35vw;
-  font-weight: 900;
-  letter-spacing: 20px;
-}
-.texts2 {
-  position: absolute;
-
-  color: transparent;
-  /* text-shadow: 0px 0px 0px 2px #e3ca6a; */
-  z-index: 12;
-  -webkit-text-stroke: #e3ca6a 1.6px;
-}
 .page1img {
   width: 30vw;
   position: fixed;
   z-index: 10;
   rotate: 10deg;
+}
+.page-about2{
+  position: relative;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    -45deg,
+    var(--red-900-color) 40%,
+    var(--primary-color) 40%
+  );
+  padding: 1.5%;
+}
+.text-about22{
+  font-family: font2;
+  font-size: 4vw;
+  font-weight: 500;
+}
+@media only screen and (min-height: 768px) {
+  .page1img {
+    width: 35vw;
+    position: fixed;   
+  }
 }

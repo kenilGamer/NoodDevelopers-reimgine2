@@ -6,7 +6,7 @@ function ls() {
     el: document.querySelector("#main"),
     smooth: true,
     smoothMobile: 0.1,
-    inertia: 0.4,
+    inertia: 0.7,
     multiplier: 0.7,
   });
 
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-navbar()
+  navbar();
   const cords = { x: 0, y: 0 };
   const circles = document.querySelectorAll(".circle");
 
@@ -127,16 +127,13 @@ navbar()
       circle.style.scale = (circles.length - index) / circles.length;
       circle.x = x;
       circle.y = y;
-
       const nextCircle = circles[index + 1] || circles[0];
       x += (nextCircle.x - x) * 0.2;
       y += (nextCircle.y - y) * 0.2;
     });
     requestAnimationFrame(animateCircles);
   }
-
   animateCircles();
-
   const nav = document.querySelector(".nav ");
   nav.addEventListener("mouseenter", () => {
     gsap.to(circles, {
@@ -249,11 +246,11 @@ navbar()
 
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".page3-a",
+        trigger: ".page3",
         scroller: "#main",
         toggleActions: "restart none none reverse",
-        start: "top 30%",
-        end: "top -30%",
+        start: "top 50%",
+        end: "top -20%",
         scrub: 5,
       },
     });
@@ -266,9 +263,9 @@ navbar()
     tl.from(
       ".Cyberstud21 span",
       {
-        duration: 3,
+        duration: 2,
         opacity: 0,
-        y: -100,
+        y: 100,
         stagger: 0.1,
       },
       "-=0.5"
@@ -277,17 +274,179 @@ navbar()
       duration: 6,
       top: "220%",
       rotate: 20,
-      left: "35%",
-      scale: 1,
+      left: "60%",
+      // scale: 1,
     });
+    const tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".page-about2",
+        scroller: "#main",
+        toggleActions: "restart none none reverse",
+        start: "top 0%",
+        end: "top -5%",
+        // scrub: 5,
+        pin: true,
+        // scrub: 5,
+      },
+    });
+
+    tl2.from(".text-about2",{
+      duration: 1.5,
+      opacity: 0,
+      y: 200,
+      ease: "elastic.out(1, 0.3)"
+    })
+
   }
 
   function page4() {
-    // Page 4 animations can be added here
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".page4",
+        scroller: "#main",
+        toggleActions: "restart none none reverse",
+        start: "top 0%",
+        end: "top -80%",
+        pin: true,
+        scrub: 5,
+      },
+    });
+    tl.to(".texts2", {
+      duration: 1.2,
+      opacity: 0,
+      scale: 3,
+    });
+
+    tl.to(".page4img", {
+      duration: 3,
+      top: "110%",
+      rotate: 370,
+      left: "10%",
+      scale: 1.2,
+    });
   }
 
+  function page5() {
+    function texts() {
+      let h1 = document.querySelector(".top-text");
+      let texts = h1.textContent;
+      let splittedText = texts.split("");
+      let clutter = "";
+      let letters = splittedText.forEach((elem) => {
+        clutter += `<span class='newtext'>${elem}</span>`;
+      });
+      h1.innerHTML = clutter;
+    }
+    texts();
+    function texts2() {
+      let h1 = document.querySelector(".top-text1");
+      let texts = h1.textContent;
+      let splittedText = texts.split("");
+      let clutter = "";
+      let letters = splittedText.forEach((elem) => {
+        clutter += `<span class='newtext'>${elem}</span>`;
+      });
+      h1.innerHTML = clutter;
+    }
+    texts2();
+    function texts3() {
+      let h1 = document.querySelector(".text-hrs");
+      let texts = h1.textContent;
+      let splittedText = texts.split("");
+      let clutter = "";
+      let letters = splittedText.forEach((elem) => {
+        clutter += `<span class='newtext'>${elem}</span>`;
+      });
+      h1.innerHTML = clutter;
+    }
+    texts3();
+    function texts4() {
+      let h1 = document.querySelector(".text-fast");
+      let texts = h1.textContent;
+      let splittedText = texts.split("");
+      let clutter = "";
+      let letters = splittedText.forEach((elem) => {
+        clutter += `<span class='newtext'>${elem}</span>`;
+      });
+      h1.innerHTML = clutter;
+    }
+    texts4();
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".page5",
+        scroller: "#main",
+        toggleActions: "restart none none reverse",
+        start: "top 50%",
+        end: "top -20%",
+        // pin: true,
+        scrub: 5,
+      },
+    });
+    tl.from(
+      ".top-text span",
+      {
+        duration: 3,
+        opacity: 0,
+        y: -100,
+        stagger: 0.1,
+      },
+      "a"
+    );
+    tl.from(
+      ".top-text1 span",
+      {
+        duration: 3,
+        opacity: 0,
+        y: -100,
+        stagger: 0.1,
+      },
+      "a"
+    );
+    tl.from(
+      ".text-hrs span",
+      {
+        duration: 3,
+        opacity: 0,
+        y: -100,
+        stagger: 0.1,
+      },
+      "a"
+    );
+    tl.from(
+      ".text-fast span",
+      {
+        duration: 3,
+        opacity: 0,
+        y: -100,
+        stagger: 0.1,
+      },
+      "a"
+    );
+  }
+  function countUps() {
+    const countUp = (element, endValue) => {
+      console.log(element);
+      gsap.to(".text-70", {
+        innerText: endValue,
+        duration: 5,
+        scrollTrigger: {
+          trigger: ".centre-text",
+          scroller: "#main",
+          toggleActions: "restart none none reverse",
+          start: "top -80%",
+        },
+        onUpdate: function () {
+          element.innerHTML = Math.ceil(element.innerText);
+        },
+      });
+    };
+    const text70 = document.querySelector(".text-70");
+    countUp(text70, 70);
+  }
+  countUps();
   page1();
   page2();
   page3();
   page4();
+  page5();
 });
