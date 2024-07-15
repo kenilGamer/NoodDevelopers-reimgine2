@@ -22,10 +22,10 @@ function setup() {
         mouse.x = e.clientX;
         mouse.y = e.clientY;
     });
-    window.addEventListener('touchmove', function(e) {
-        e.preventDefault(); // Prevent default touch behavior (like scrolling)
-        updateTouchPosition(e);
-    });
+    // window.addEventListener('touchmove', function(e) {
+    //     e.preventDefault(); // Prevent default touch behavior (like scrolling)
+    //     // updateTouchPosition(e);
+    // });
 
     window.addEventListener('click', function(e) {
         const burstCount = 20;

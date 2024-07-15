@@ -57,57 +57,7 @@
   -webkit-animation: navtext 1s ease forwards;
 }
 
-@keyframes navtext {
-  0% {
-    transform: scale(1,1);
-    -webkit-transform: scale(1,1);
-    -moz-transform: scale(1,1);
-    -ms-transform: scale(1,1);
-    -o-transform: scale(1,1);
-  }
-  30% {
-    transform: scale(1.5,0.75);
-    -webkit-transform: scale(1.5,0.75);
-    -moz-transform: scale(1.5,0.75);
-    -ms-transform: scale(1.5,0.75);
-    -o-transform: scale(1.5,0.75);
-}
-  40% {
-    transform: scale(0.75,1.5);
-    -webkit-transform: scale(0.75,1.5);
-    -moz-transform: scale(0.75,1.5);
-    -ms-transform: scale(0.75,1.5);
-    -o-transform: scale(0.75,1.5);
-}
-50% {
-  transform: scale(1.5,0.85);
-  -webkit-transform: scale(1.5,0.85);
-  -moz-transform: scale(1.5,0.85);
-  -ms-transform: scale(1.5,0.85);
-  -o-transform: scale(1.5,0.85);
-}
-65%{
-  transform: scale(0.95,1.05);
-  -webkit-transform: scale(0.95,1.05);
-  -moz-transform: scale(0.95,1.05);
-  -ms-transform: scale(0.95,1.05);
-  -o-transform: scale(0.95,1.05);
-}
-75%{
-  transform: scale(1.05,0.95);
-  -webkit-transform: scale(1.05,0.95);
-  -moz-transform: scale(1.05,0.95);
-  -ms-transform: scale(1.05,0.95);
-  -o-transform: scale(1.05,0.95);
-}
-100% {
-  transform: scale(1,1);
-  -webkit-transform: scale(1,1);
-  -moz-transform: scale(1,1);
-  -ms-transform: scale(1,1);
-  -o-transform: scale(1,1);
-}
-}
+
 .nav .nav-shop {
   position: absolute;
   left: 45%;

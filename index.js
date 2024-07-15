@@ -1,105 +1,69 @@
-function ls() {
-  ScrollTrigger.normalizeScroll(true);
-  ScrollTrigger.defaults({ ignoreMobileResize: true });
-  gsap.registerPlugin(ScrollTrigger);
-  const locoScroll = new LocomotiveScroll({
-    el: document.querySelector("#main"),
-    smooth: true,
-    smoothMobile: 0.1,
-    inertia: 0.7,
-    multiplier: 0.7,
-  });
+document.addEventListener('DOMContentLoaded', (event) => {
 
-  locoScroll.on("scroll", ScrollTrigger.update);
-  ScrollTrigger.scrollerProxy("#main", {
-    scrollTop(value) {
-      return arguments.length
-        ? locoScroll.scrollTo(value, 0, 0)
-        : locoScroll.scroll.instance.scroll.y;
-    },
-    getBoundingClientRect() {
-      return {
-        top: 0,
-        left: 0,
-        width: window.innerWidth,
-        height: window.innerHeight,
-      };
-    },
-    pinType: document.querySelector("#main").style.transform
-      ? "transform"
-      : "fixed",
-  });
-  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-  ScrollTrigger.refresh();
-}
-document.addEventListener("DOMContentLoaded", () => {
-  ls();
-  function navbar() {
-    var right_mobile_nav = document.querySelector(".right_mobile_nav");
-    var nav_line_1 = document.querySelector(".nav_line_1");
-    var nav_line_2 = document.querySelector(".nav_line_2");
-    var mobile_nav_ = document.querySelector(".mobile_nav_");
-    var nav = false;
-
-    var mbnav = gsap.timeline();
-    var mbnav_ = gsap.timeline();
-
-    right_mobile_nav.addEventListener("click", () => {
-      if (nav) {
-        nav = false;
-
-        mbnav_.to(
-          nav_line_1,
-          {
-            position: "static",
-            transform: "rotate(0deg)",
-            direction: 1,
-          },
-          "a"
-        );
-        mbnav_.to(
-          nav_line_2,
-          {
-            position: "static",
-            transform: "rotate(0deg)",
-            direction: 1,
-          },
-          "a"
-        );
-        mbnav_.to(mobile_nav_, {
-          right: -100 + "vw",
-        });
-      } else {
-        nav = true;
-        mbnav.to(
-          nav_line_1,
-          {
-            position: "absolute",
-            transform: "rotate(45deg)",
-            direction: 1,
-            zIndex: 100000,
-          },
-          "a"
-        );
-        mbnav.to(
-          nav_line_2,
-          {
-            postion: "absolute",
-            transform: "rotate(-45deg)",
-            zIndex: 100000,
-            direction: 1,
-          },
-          "a"
-        );
-        mbnav_.to(mobile_nav_, {
-          right: 0,
-          ease: "bounce.out",
-          duration: 2.5,
-        });
-      }
+  // Locomotive Scroll initialization and ScrollTrigger setup
+  function ls() {
+    ScrollTrigger.normalizeScroll(true);
+    ScrollTrigger.defaults({ ignoreMobileResize: true });
+    gsap.registerPlugin(ScrollTrigger);
+    const locoScroll = new LocomotiveScroll({
+      el: document.querySelector("#main"),
+      smooth: true,
+      smoothMobile: 0.1,
+      inertia: 0.7,
+      multiplier: 0.7,
     });
+
+    locoScroll.on("scroll", ScrollTrigger.update);
+    ScrollTrigger.scrollerProxy("#main", {
+      scrollTop(value) {
+        return arguments.length
+          ? locoScroll.scrollTo(value, 0, 0)
+          : locoScroll.scroll.instance.scroll.y;
+      },
+      getBoundingClientRect() {
+        return {
+          top: 0,
+          left: 0,
+          width: window.innerWidth,
+          height: window.innerHeight,
+        };
+      },
+      pinType: document.querySelector("#main").style.transform
+        ? "transform"
+        : "fixed",
+    });
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+    ScrollTrigger.refresh();
   }
-  navbar();
+
+  // Navbar animation function
+  function navbar() {
+    let nav = false;
+  const mbnav = gsap.timeline();
+  const mbnav_ = gsap.timeline();
+  const right_mobile_nav = document.querySelector(".right_mobile_nav");
+  const nav_line_1 = document.querySelector(".nav_line_1");
+  const nav_line_2 = document.querySelector(".nav_line_2");
+  const mobile_nav_ = document.querySelector(".mobile_nav_");
+
+  // Event listener for mobile nav click
+  right_mobile_nav.addEventListener("click", () => {
+    if (nav) {
+      nav = false;
+      mbnav_.to(nav_line_1, { transform: "rotate(0deg)" }, "a")
+            .to(nav_line_2, { transform: "rotate(0deg)" }, "a")
+            .to(mobile_nav_, { right: -100 + "vw" });
+    } else {
+      nav = true;
+      mbnav.to(nav_line_1, { transform: "rotate(45deg)", zIndex: 100000 }, "a")
+           .to(nav_line_2, { transform: "rotate(-45deg)", zIndex: 100000 }, "a")
+           .to(mobile_nav_, { right: 0, ease: "bounce.out", duration: 2.5 });
+    }
+  });
+
+  }
+
+  // Mousemove animation for circles
   const cords = { x: 0, y: 0 };
   const circles = document.querySelectorAll(".circle");
 
@@ -112,12 +76,14 @@ document.addEventListener("DOMContentLoaded", () => {
     cords.x = e.clientX;
     cords.y = e.clientY;
   });
+
   document.addEventListener("touchmove", (e) => {
     if (e.touches.length > 0) {
       cords.x = e.touches[0].clientX;
       cords.y = e.touches[0].clientY;
     }
   });
+
   function animateCircles() {
     let x = cords.x;
     let y = cords.y;
@@ -133,21 +99,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     requestAnimationFrame(animateCircles);
   }
+
   animateCircles();
+
+  // Hover animation for nav items
   const nav = document.querySelector(".nav ");
   nav.addEventListener("mouseenter", () => {
     gsap.to(circles, {
       scale: 2,
       duration: 0.5,
-      // ease: "elastic.out(1, 0.3)"
     });
   });
+
   nav.addEventListener("mouseleave", () => {
     gsap.to(circles, {
       scale: 1,
       duration: 0.5,
     });
   });
+
+  // Page animations using GSAP
   function page1() {
     const tl = gsap.timeline();
     tl.to(".nav-img", {
@@ -254,12 +225,14 @@ document.addEventListener("DOMContentLoaded", () => {
         scrub: 5,
       },
     });
+
     tl.from(".about2121 span", {
       duration: 3,
       opacity: 0,
       y: -100,
       stagger: 0.1,
     });
+
     tl.from(
       ".Cyberstud21 span",
       {
@@ -270,13 +243,14 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       "-=0.5"
     );
+
     tl.to(".page1img", {
       duration: 6,
       top: "220%",
       rotate: 20,
       left: "60%",
-      // scale: 1,
     });
+
     const tl2 = gsap.timeline({
       scrollTrigger: {
         trigger: ".page-about2",
@@ -284,19 +258,17 @@ document.addEventListener("DOMContentLoaded", () => {
         toggleActions: "restart none none reverse",
         start: "top 0%",
         end: "top -5%",
-        // scrub: 5,
         pin: true,
-        // scrub: 5,
       },
     });
 
-    tl2.from(".text-about22",{
+    tl2.from(".text-about22", {
       duration: 2,
       opacity: 0,
       y: 100,
       stagger: 0.4,
       ease: "elastic.out(1, 0.7)"
-    })
+    });
 
   }
 
@@ -312,6 +284,7 @@ document.addEventListener("DOMContentLoaded", () => {
         scrub: 5,
       },
     });
+
     tl.to(".texts2", {
       duration: 1.2,
       opacity: 0,
@@ -338,7 +311,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       h1.innerHTML = clutter;
     }
+
     texts();
+
     function texts2() {
       let h1 = document.querySelector(".top-text1");
       let texts = h1.textContent;
@@ -349,7 +324,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       h1.innerHTML = clutter;
     }
+
     texts2();
+
     function texts3() {
       let h1 = document.querySelector(".text-hrs");
       let texts = h1.textContent;
@@ -360,7 +337,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       h1.innerHTML = clutter;
     }
+
     texts3();
+
     function texts4() {
       let h1 = document.querySelector(".text-fast");
       let texts = h1.textContent;
@@ -371,7 +350,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       h1.innerHTML = clutter;
     }
+
     texts4();
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".page5",
@@ -379,10 +360,10 @@ document.addEventListener("DOMContentLoaded", () => {
         toggleActions: "restart none none reverse",
         start: "top 50%",
         end: "top -20%",
-        // pin: true,
         scrub: 5,
       },
     });
+
     tl.from(
       ".top-text span",
       {
@@ -393,6 +374,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       "a"
     );
+
     tl.from(
       ".top-text1 span",
       {
@@ -403,6 +385,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       "a"
     );
+
     tl.from(
       ".text-hrs span",
       {
@@ -413,6 +396,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       "a"
     );
+
     tl.from(
       ".text-fast span",
       {
@@ -424,10 +408,11 @@ document.addEventListener("DOMContentLoaded", () => {
       "a"
     );
   }
+
+  // Function to animate text counter
   function countUps() {
     const countUp = (element, endValue) => {
-      console.log(element);
-      gsap.to(".text-70", {
+      gsap.to(element, {
         innerText: endValue,
         duration: 5,
         scrollTrigger: {
@@ -441,13 +426,19 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       });
     };
+
     const text70 = document.querySelector(".text-70");
     countUp(text70, 70);
   }
-  countUps();
+
+  // Calling all page functions
+  ls();
+  navbar();
   page1();
   page2();
   page3();
   page4();
   page5();
+  countUps();
+
 });
