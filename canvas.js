@@ -27,7 +27,6 @@ function setup() {
         updateTouchPosition(e);
     });
 
-    // Add click event listener for particle bursts
     window.addEventListener('click', function(e) {
         const burstCount = 20;
         for (let i = 0; i < burstCount; i++) {
