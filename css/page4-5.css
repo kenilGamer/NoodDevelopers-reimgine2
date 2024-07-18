@@ -106,6 +106,15 @@
     letter-spacing: 3px;
   }
   
+
+  .page6{
+    position: relative;
+    /* z-index: -1; */
+    /* background: #421356; */
+    width: 100vw;
+    height: 100vh;
+    padding: 1.5%;
+  }
   @media only screen and (min-height: 768px) {
     .text-fast {
       position: absolute;

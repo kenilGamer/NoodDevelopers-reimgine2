@@ -406,6 +406,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
       },
       "a"
     );
+    tl.to(".page4img", {
+      duration: 3,
+      top: "215%",
+      rotate: 370,
+      left: "50%",
+      scale: 1.2,
+    });
   }
 
   function countUps() {
@@ -421,7 +428,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
           start: "top 80%",
           end: "top 0%",
           scrub: 5,
-          markers: true
+          // markers: true
         },
         onUpdate: function () {
           element.innerHTML = Math.ceil(this.targets()[0].innerText);
@@ -432,6 +439,32 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const text70 = document.querySelector(".text-70");
     countUp(text70, 70);
   }
+  function page6() {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".page5",
+        scroller: "#main",
+        toggleActions: "restart none none reverse",
+        start: "top 50%",
+        end: "top -20%",
+        scrub: 5,
+      },
+    });
+    gsap.to(".page4img", {
+      duration: 3,
+      // scale: 1.2,
+      rotate: 500,
+      repeat: -1,
+      scrollTrigger: {
+        trigger: ".page6",
+        scroller: "#main",
+        toggleActions: "restart none none reverse",
+        start: "top 50%",
+        end: "top -20%",
+        
+      },
+    });
+  }
   // Calling all page functions
   ls();
   navbar();
@@ -440,5 +473,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   page3();
   page4();
   page5();
+  page6();
   countUps();
 });
