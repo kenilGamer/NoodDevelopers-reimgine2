@@ -137,6 +137,15 @@
     color: var(--yello-color);
     letter-spacing: 3px;
   }
+  .Rectangle62{
+    position: absolute;
+    width: 300px;
+  }
+  .Rectangle63{
+    position: absolute;
+    top:70vh;
+    width: 300px;
+  }
   @media only screen and (min-height: 768px) {
     .text-fast {
       position: absolute;

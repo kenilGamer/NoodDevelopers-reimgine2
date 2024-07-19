@@ -264,10 +264,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
       },
     });
 
-    tl2.from(".text-about22", {
+    tl2.from(".text-about22 h3,.text-about22 p", {
       duration: 2,
       opacity: 0,
-      y: 10,
+      y: 100,
       stagger: 0.4,
       // ease: "elastic.out(1, 0.7)",
     });
@@ -455,7 +455,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     gsap.from(".page4img", {
       duration: 3,
       // scale: 1.2,
-      rotate: 500,
+      rotateZ: 500,
       repeat: -1,
       scrollTrigger: {
         trigger: ".page6",

@@ -81,11 +81,12 @@
   /* background: #fc415b; */
 }
 .page3-l h1 {
+  overflow: hidden;
   color: #e3ca6a;
   font-size: 4.5vw;
 }
 .page3-l p {
-  /* color: #e3ca6a; */
+  overflow: hidden;
   margin-top: 30px;
   width: 37vw;
   font-size: 2.5vw;
@@ -135,6 +136,7 @@
   align-items: center;
   gap: 10px;
   font-family: font2;
+  overflow: hidden;
   /* font-size: 3vw; */
   /* font-weight: 500; */
 }
