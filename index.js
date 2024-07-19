@@ -201,19 +201,19 @@ document.addEventListener("DOMContentLoaded", (event) => {
       h1.innerHTML = clutter;
     }
 
-    function texts2() {
-      let h1 = document.querySelector(".Cyberstud21");
-      let texts = h1.textContent;
-      let splittedText = texts.split("");
-      let clutter = "";
-      let letters = splittedText.forEach((elem) => {
-        clutter += `<span class='newtext'>${elem}</span>`;
-      });
-      h1.innerHTML = clutter;
-    }
+    // function texts2() {
+    //   let h1 = document.querySelector(".Cyberstud21");
+    //   let texts = h1.textContent;
+    //   let splittedText = texts.split("");
+    //   let clutter = "";
+    //   let letters = splittedText.forEach((elem) => {
+    //     clutter += `<span class='newtext'>${elem}</span>`;
+    //   });
+    //   h1.innerHTML = clutter;
+    // }
 
     texts();
-    texts2();
+    // texts2();
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -466,6 +466,42 @@ document.addEventListener("DOMContentLoaded", (event) => {
       },
     });
   }
+  
+function disintegrate(event){
+  //console.log(this.event.target.children.length);
+  let i=0;
+  for(i=0;i<this.event.target.children.length;i++){
+    this.event.target.children[i].classList.add('disintegrate');
+  }
+}
+
+
+
+
+function splitString(str){
+  let splittedTextHtml='',generatedHTML='';
+  let string = str.textContent;
+  let i;
+  for(i=0;i<string.length;i++){
+    splittedTextHtml += `
+    <span char="${string[i]}" style="--totalChars:${string.length};--index:${i};--delay:${i*100}ms;--duration:${string.length*100}ms">
+    ${string[i]}
+    </span>`;
+  }
+  
+  generatedHTML = `<div>${splittedTextHtml}</div>`
+  str.innerHTML = generatedHTML;
+}
+
+function splittingInit(){
+  let splitCharArr = document.querySelectorAll('.split-text');
+  splitCharArr.forEach((str)=>{
+  splitString(str);
+})
+}
+
+splittingInit();
+
   // Calling all page functions
   ls();
   navbar();
