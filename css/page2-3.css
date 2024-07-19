@@ -86,9 +86,9 @@
   font-size: 4.5vw;
 }
 .page3-l p {
-  overflow: hidden;
   margin-top: 30px;
-  width: 37vw;
+  min-width: 39vw;
+  /* text-align: start; */
   font-size: 2.5vw;
 }
 .page3-r {
