@@ -89,3 +89,7 @@
     pointer-events: none;
     
   }
+  .newtext{
+    display:inline-block;
+    overflow: hidden;
+  }

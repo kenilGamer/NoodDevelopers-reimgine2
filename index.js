@@ -229,7 +229,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     tl.from(".about2121 span", {
       duration: 3,
       opacity: 0,
-      y: -100,
+      y: 5,
       stagger: 0.1,
     });
 
@@ -238,7 +238,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       {
         duration: 2,
         opacity: 0,
-        y: 100,
+        y: 5,
         stagger: 0.1,
       },
       "-=0.5"
@@ -256,18 +256,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: ".page-about2",
         scroller: "#main",
         toggleActions: "restart none none reverse",
-        start: "top 0%",
+        start: "top 20%",
         end: "top -5%",
-        pin: true,
+        scrub: 5,
+        
+        // pin: true,
       },
     });
 
     tl2.from(".text-about22", {
       duration: 2,
       opacity: 0,
-      y: 100,
+      y: 10,
       stagger: 0.4,
-      ease: "elastic.out(1, 0.7)",
+      // ease: "elastic.out(1, 0.7)",
     });
   }
 
@@ -368,7 +370,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       {
         duration: 3,
         opacity: 0,
-        y: -100,
+        y: 5,
         stagger: 0.1,
       },
       "a"
@@ -379,7 +381,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       {
         duration: 3,
         opacity: 0,
-        y: -100,
+        y: 5,
         stagger: 0.1,
       },
       "a"
@@ -390,7 +392,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       {
         duration: 3,
         opacity: 0,
-        y: -100,
+        y: 5,
         stagger: 0.1,
       },
       "a"
@@ -401,7 +403,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       {
         duration: 3,
         opacity: 0,
-        y: -100,
+        y: 5,
         stagger: 0.1,
       },
       "a"

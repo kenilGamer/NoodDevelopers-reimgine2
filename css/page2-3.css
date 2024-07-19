@@ -133,16 +133,17 @@
 .text-about22{
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   font-family: font2;
   /* font-size: 3vw; */
   /* font-weight: 500; */
 }
 
 .text-about22 h3{
+  color: #e3ca6a;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   font-family: font1;
   font-size: 3vw;
   font-weight: 500;
