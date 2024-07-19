@@ -57,11 +57,11 @@
   z-index: -1;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(
+  /* background: linear-gradient(
     -45deg,
     var(--red-900-color) 50%,
     var(--primary-color) 50%
-  );
+  ); */
   padding: 1.5%;
 }
 .page3-a {
@@ -110,17 +110,19 @@
   position: fixed;
   z-index: 10;
   rotate: 10deg;
+  filter: contrast(1.2);
+  -webkit-filter: contrast(1.2);
 }
 .page-about2{
   position: relative;
   z-index: -1;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(
+  /* background: linear-gradient(
     -45deg,
     var(--red-900-color) 40%,
     var(--primary-color) 40%
-  );
+  ); */
   padding: 1.5%;
   display: flex;
   flex-direction: column;

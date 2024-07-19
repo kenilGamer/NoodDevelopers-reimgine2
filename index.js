@@ -442,7 +442,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   function page6() {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".page5",
+        trigger: ".page6",
         scroller: "#main",
         toggleActions: "restart none none reverse",
         start: "top 50%",
@@ -450,7 +450,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         scrub: 5,
       },
     });
-    gsap.to(".page4img", {
+    gsap.from(".page4img", {
       duration: 3,
       // scale: 1.2,
       rotate: 500,
@@ -460,8 +460,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         scroller: "#main",
         toggleActions: "restart none none reverse",
         start: "top 50%",
-        end: "top -20%",
-        
+        end: "top -20%",  
       },
     });
   }
