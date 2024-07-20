@@ -526,6 +526,135 @@ function splittingInit(){
 
 splittingInit();
 
+
+function page7(){
+  
+
+const media = window.matchMedia('(max-width: 600px)');
+let tl = gsap.timeline({
+  scrollTrigger: {
+    scroller: "#main",
+    trigger: ".page7-a",
+    // markers: true,
+    start: "top 0%",
+    end: "top -80%",
+    scrub: 5,
+    pin: true
+  },
+});
+
+tl.from(
+  ".Immersive h3",
+  {
+    y: 100,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
+  },
+  
+);
+
+tl.from(
+  ".Immersive h1",
+  {
+    y: 80,
+    duration: 1.2,
+    opacity: 0,
+  },
+  "0.5"
+);
+
+if (media.matches) {
+
+  tl.to("#right-earbuds", {
+    top: "260%",
+    left: "30%",
+    width: "30%",
+  });
+}else{
+  tl.to("#right-earbuds", {
+    top: "110%",
+    left: "30%",
+    width: "30%",
+  });
+}
+let tl1 = gsap.timeline({
+  scrollTrigger: {
+    scroller: "#main",
+    trigger: ".page7-beatbox",
+    // markers: true,
+    start: "top 30%",
+    end: "top -30%",
+    scrub: 5,
+  },
+})
+tl1.from(".img-text h1", {
+  opacity: 0,
+  duration: 1,
+  y: 40,
+});
+tl1.from(".actor-beat",{
+  opacity: 0,
+  duration: 1,
+  y: 400,
+})
+
+
+let tl3 = gsap.timeline({
+  scrollTrigger: {
+    scroller: "#main",
+    trigger: ".page7-b",
+    // markers: true,
+    start: "top 0%",
+    end: "top -10%",
+    scrub: 5,
+    pin: true,
+  },
+})
+
+tl3.from(".touch-control h1", {
+  y: 80,
+  duration: 0.8,
+  stagger: 0.3,
+  opacity: 0,
+});
+tl3.from(
+  ".features h4,h3",
+  {
+    y: 80,
+    duration: 0.5,
+    stagger: 0.1,
+    opacity: 0,
+  },
+  "p7"
+);
+tl3.from(
+  ".features-left img",
+  {
+    y: 100,
+    opacity: 0,
+  },
+  "p7"
+);
+let tl2 = gsap.timeline({
+  scrollTrigger: {
+    scroller: "#main",
+    trigger: ".page7-c",
+    // markers: true,
+    start: "top 0%",
+    end: "top -10%",
+    scrub: 5,
+    pin: true,
+  },
+})
+tl2.from(".quick h1", {
+  y: 100,
+  opacity: 0,
+  stagger: 0.3,
+  duration: 1,
+});
+
+}
 // Calling all page functions
   ls();
   navbar();
@@ -535,6 +664,7 @@ splittingInit();
   page4();
   page5();
   page6();
+  page7();
   countUps();
 });
 function box(cardNumber) {
