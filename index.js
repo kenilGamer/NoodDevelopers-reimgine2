@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", (event) => {
   // Locomotive Scroll initialization and ScrollTrigger setup
-  function ls() {
     ScrollTrigger.normalizeScroll(true);
     ScrollTrigger.defaults({ ignoreMobileResize: true });
     gsap.registerPlugin(ScrollTrigger);
@@ -33,7 +32,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
     ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
     ScrollTrigger.refresh();
-  }
+
 
   // Navbar animation function
   function navbar() {
@@ -103,6 +102,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   animateCircles();
 
   // Hover animation for nav items
+  
   const nav = document.querySelector(".nav ");
   nav.addEventListener("mouseenter", () => {
     gsap.to(circles, {
@@ -164,6 +164,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   }
 
   function page2() {
+    const media = window.matchMedia('(max-width: 600px)');
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".page2",
@@ -180,13 +181,25 @@ document.addEventListener("DOMContentLoaded", (event) => {
       opacity: 0,
       scale: 3,
     });
-    tl.to(".page1img", {
-      duration: 3,
-      top: "120%",
-      rotate: 370,
-      left: "55%",
-      scale: 1.5,
-    });
+    if(media.matches){
+      tl.to(".page1img", {
+        duration: 3,
+        top: "120%",
+        rotate: 370,
+        left: "30%",
+        scale: 2,
+      });
+    }
+    else{
+      tl.to(".page1img", {
+        duration: 3,
+        top: "120%",
+        rotate: 370,
+        left: "55%",
+        scale: 1.5,
+      });
+    }
+    
   }
 
   function page3() {
@@ -214,7 +227,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     texts();
     texts2();
-
+    const media = window.matchMedia('(max-width: 600px)');
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".page3",
@@ -243,13 +256,23 @@ document.addEventListener("DOMContentLoaded", (event) => {
       },
       "-=0.5"
     );
-
-    tl.to(".page1img", {
+    if(media.matches){
+      tl.to(".page1img", {
+        duration: 6,
+        top: "220%",
+        rotate: 20,
+        left: "30%",
+      });
+    }
+    else{
+      tl.to(".page1img", {
       duration: 6,
       top: "220%",
       rotate: 20,
       left: "60%",
     });
+    }
+    
 
     const tl2 = gsap.timeline({
       scrollTrigger: {
@@ -272,6 +295,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   }
 
   function page4() {
+    const media = window.matchMedia('(max-width: 600px)');
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".page4",
@@ -289,14 +313,25 @@ document.addEventListener("DOMContentLoaded", (event) => {
       opacity: 0,
       scale: 3,
     });
-
-    tl.to(".page4img", {
-      duration: 3,
-      top: "110%",
-      rotate: 370,
-      left: "10%",
-      scale: 1.2,
-    });
+    if(media.matches){
+      tl.to(".page4img", {
+        duration: 3,
+        top: "110%",
+        rotate: 370,
+        left: "30%",
+        scale: 1.5,
+      });
+    }
+    else{
+      tl.to(".page4img", {
+        duration: 3,
+        top: "110%",
+        rotate: 370,
+        left: "10%",
+        scale: 1.2,
+      });
+    }
+    
   }
 
   function page5() {
@@ -351,7 +386,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
     texts4();
-
+    
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".page5",
@@ -433,7 +468,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     countUp(text70, 70);
   }
   // Calling all page functions
-  ls();
+ 
   navbar();
   page1();
   page2();
