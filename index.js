@@ -214,20 +214,23 @@ document.addEventListener("DOMContentLoaded", (event) => {
       h1.innerHTML = clutter;
     }
 
-    function texts2() {
-      let h1 = document.querySelector(".Cyberstud21");
-      let texts = h1.textContent;
-      let splittedText = texts.split("");
-      let clutter = "";
-      let letters = splittedText.forEach((elem) => {
-        clutter += `<span class='newtext'>${elem}</span>`;
-      });
-      h1.innerHTML = clutter;
-    }
+    // function texts2() {
+    //   let h1 = document.querySelector(".Cyberstud21");
+    //   let texts = h1.textContent;
+    //   let splittedText = texts.split("");
+    //   let clutter = "";
+    //   let letters = splittedText.forEach((elem) => {
+    //     clutter += `<span class='newtext'>${elem}</span>`;
+    //   });
+    //   h1.innerHTML = clutter;
+    // }
 
     texts();
+
     texts2();
     const media = window.matchMedia('(max-width: 600px)');
+
+    // texts2();
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".page3",
@@ -242,7 +245,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     tl.from(".about2121 span", {
       duration: 3,
       opacity: 0,
-      y: -100,
+      y: 5,
       stagger: 0.1,
     });
 
@@ -251,7 +254,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       {
         duration: 2,
         opacity: 0,
-        y: 100,
+        y: 5,
         stagger: 0.1,
       },
       "-=0.5"
@@ -279,18 +282,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: ".page-about2",
         scroller: "#main",
         toggleActions: "restart none none reverse",
-        start: "top 0%",
+        start: "top 20%",
         end: "top -5%",
-        pin: true,
+        scrub: 5,
+        
+        // pin: true,
       },
     });
 
-    tl2.from(".text-about22", {
+    tl2.from(".text-about22 h3,.text-about22 p", {
       duration: 2,
       opacity: 0,
       y: 100,
       stagger: 0.4,
-      ease: "elastic.out(1, 0.7)",
+      // ease: "elastic.out(1, 0.7)",
     });
   }
 
@@ -403,7 +408,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       {
         duration: 3,
         opacity: 0,
-        y: -100,
+        y: 5,
         stagger: 0.1,
       },
       "a"
@@ -414,7 +419,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       {
         duration: 3,
         opacity: 0,
-        y: -100,
+        y: 5,
         stagger: 0.1,
       },
       "a"
@@ -425,7 +430,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       {
         duration: 3,
         opacity: 0,
-        y: -100,
+        y: 5,
         stagger: 0.1,
       },
       "a"
@@ -436,11 +441,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
       {
         duration: 3,
         opacity: 0,
-        y: -100,
+        y: 5,
         stagger: 0.1,
       },
       "a"
     );
+    tl.to(".page4img", {
+      duration: 3,
+      top: "215%",
+      rotate: 370,
+      left: "50%",
+      scale: 1.2,
+    });
   }
 
   function countUps() {
@@ -456,7 +468,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
           start: "top 80%",
           end: "top 0%",
           scrub: 5,
-          markers: true
+          // markers: true
         },
         onUpdate: function () {
           element.innerHTML = Math.ceil(this.targets()[0].innerText);
@@ -467,6 +479,67 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const text70 = document.querySelector(".text-70");
     countUp(text70, 70);
   }
+  function page6() {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".page6",
+        scroller: "#main",
+        toggleActions: "restart none none reverse",
+        start: "top 50%",
+        end: "top -20%",
+        scrub: 5,
+      },
+    });
+    gsap.from(".page4img", {
+      duration: 3,
+      // scale: 1.2,
+      rotateZ: 500,
+      repeat: -1,
+      scrollTrigger: {
+        trigger: ".page6",
+        scroller: "#main",
+        toggleActions: "restart none none reverse",
+        start: "top 50%",
+        end: "top -20%",  
+      },
+    });
+  }
+  
+function disintegrate(event){
+  //console.log(this.event.target.children.length);
+  let i=0;
+  for(i=0;i<this.event.target.children.length;i++){
+    this.event.target.children[i].classList.add('disintegrate');
+  }
+}
+
+
+
+
+function splitString(str){
+  let splittedTextHtml='',generatedHTML='';
+  let string = str.textContent;
+  let i;
+  for(i=0;i<string.length;i++){
+    splittedTextHtml += `
+    <span char="${string[i]}" style="--totalChars:${string.length};--index:${i};--delay:${i*100}ms;--duration:${string.length*100}ms">
+    ${string[i]}
+    </span>`;
+  }
+  
+  generatedHTML = `<div>${splittedTextHtml}</div>`
+  str.innerHTML = generatedHTML;
+}
+
+function splittingInit(){
+  let splitCharArr = document.querySelectorAll('.split-text');
+  splitCharArr.forEach((str)=>{
+  splitString(str);
+})
+}
+
+splittingInit();
+
   // Calling all page functions
  
   navbar();
@@ -475,5 +548,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   page3();
   page4();
   page5();
+  page6();
   countUps();
 });

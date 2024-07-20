@@ -57,11 +57,11 @@
   z-index: -1;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(
+  /* background: linear-gradient(
     -45deg,
     var(--red-900-color) 50%,
     var(--primary-color) 50%
-  );
+  ); */
   padding: 1.5%;
 }
 .page3-a {
@@ -81,13 +81,14 @@
   /* background: #fc415b; */
 }
 .page3-l h1 {
+  overflow: hidden;
   color: #e3ca6a;
   font-size: 4.5vw;
 }
 .page3-l p {
-  /* color: #e3ca6a; */
   margin-top: 30px;
-  width: 37vw;
+  min-width: 39vw;
+  /* text-align: start; */
   font-size: 2.5vw;
 }
 .page3-r {
@@ -110,10 +111,13 @@
   position: fixed;
   z-index: 10;
   rotate: 10deg;
+  filter: contrast(1.2);
+  -webkit-filter: contrast(1.2);
 }
 .page-about{
   width: 100vw;
   height: 100vh;
+
   position: relative;
   z-index: -1;
   background: linear-gradient(
@@ -125,6 +129,11 @@
 .page-about2{
   height: 100%;
   width: 100%;
+  /* background: linear-gradient(
+    -45deg,
+    var(--red-900-color) 40%,
+    var(--primary-color) 40%
+  ); */
   padding: 1.5%;
   display: flex;
   flex-direction: column;
@@ -135,16 +144,18 @@
 .text-about22{
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   font-family: font2;
+  overflow: hidden;
   /* font-size: 3vw; */
   /* font-weight: 500; */
 }
 
 .text-about22 h3{
+  color: #e3ca6a;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   font-family: font1;
   font-size: 3vw;
   font-weight: 500;

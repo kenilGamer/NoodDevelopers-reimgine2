@@ -26,6 +26,8 @@
   height: auto;
   position: absolute;
   top: 0;
+  filter: contrast(1.3);
+  -webkit-filter: contrast(1.3);
 }
 .page1 .main_video > video {
   width: 100%;

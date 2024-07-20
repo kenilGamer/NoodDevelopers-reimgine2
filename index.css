@@ -89,3 +89,13 @@
     pointer-events: none;
     
   }
+  .newtext{
+    display:inline-block;
+    overflow: hidden;
+  }
+  .Cyberstud21 span{
+    display:inline-block;
+    letter-spacing: -11px;
+    transform-style:preserve-3d;
+    transform-origin:bottom;
+  }
