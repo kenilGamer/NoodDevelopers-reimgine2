@@ -24,19 +24,40 @@ function setup() {
         mouse.y = e.clientY;
     });
 
-    window.addEventListener('click', function(e) {
-        // Play click sound
-        clickSound.currentTime = 0;
-        clickSound.play();
+    // Add touch move event listener
+    window.addEventListener('touchmove', function(e) {
+        e.preventDefault(); // Prevent default touch behavior (like scrolling)
+        const touch = e.touches[0];
+        mouse.x = touch.clientX;
+        mouse.y = touch.clientY;
+    });
 
-        const burstCount = 20;
-        for (let i = 0; i < burstCount; i++) {
-            particles.push(createParticle(e.clientX, e.clientY));
-        }
+    // Add click event listener
+    window.addEventListener('click', function(e) {
+        handleClick(e.clientX, e.clientY);
+    });
+
+    // Add touch start event listener
+    window.addEventListener('touchstart', function(e) {
+        e.preventDefault(); // Prevent default touch behavior (like scrolling)
+        const touch = e.touches[0];
+        handleClick(touch.clientX, touch.clientY);
     });
 
     // Handle window resize
     window.addEventListener('resize', handleResize);
+}
+
+// Function to handle click and touch start events
+function handleClick(x, y) {
+    // Play click sound
+    clickSound.currentTime = 0;
+    clickSound.play();
+
+    const burstCount = 20;
+    for (let i = 0; i < burstCount; i++) {
+        particles.push(createParticle(x, y));
+    }
 }
 
 // Function to create a particle with random color and size
@@ -90,8 +111,8 @@ function draw() {
         const gravity = 1 / (distance + 1);
 
         // Apply gravitational pull towards the mouse
-        particle.speedX += gravity * dx * 0.2 ;
-        particle.speedY += gravity * dy * 0.2 ;
+        particle.speedX += gravity * dx * 0.2;
+        particle.speedY += gravity * dy * 0.2;
 
         // Update particle position
         particle.x += particle.speedX;
