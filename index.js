@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
       smoothMobile: 0.1,
       inertia: 0.7,
       multiplier: 0.7,
-    });
-
+    });    
+  
     locoScroll.on("scroll", ScrollTrigger.update);
     ScrollTrigger.scrollerProxy("#main", {
       scrollTop(value) {

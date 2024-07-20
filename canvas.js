@@ -7,7 +7,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 // Array to store particles
-let particles = [];
+let particles = []; 
 let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
 
 // Function to initialize the canvas and particles
