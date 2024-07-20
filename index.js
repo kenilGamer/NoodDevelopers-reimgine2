@@ -161,6 +161,51 @@ document.addEventListener("DOMContentLoaded", (event) => {
       },
       "b"
     );
+    
+    
+    
+    
+    var box_a_1 = document.getElementById("box_a_1");
+var box_a_2 = document.getElementById("box_a_2");
+var box_a_3 = document.getElementById("box_a_3");
+var box_a_4 = document.getElementById("box_a_4");
+var box_text = document.getElementById("box_text");
+
+
+box_a_1.addEventListener('click',()=>{
+      box_text.style.display ="block";
+      box_text.style.top ="35vw";
+     box_text.style.left ="30vw";
+     document.getElementById("box_text_h1").textContent="hi"
+     document.getElementById("box_text_h1").textContent="hi 💵2"
+
+})
+box_a_2.addEventListener('click', () => {
+        box_text.style.display ="block";
+  box_text.style.top = "100vw";
+    box_text.style.left = "40vw";
+     document.getElementById("box_text_h1").textContent="hi"
+     document.getElementById("box_text_h1").textContent="hi 👍2"
+
+})
+box_a_3.addEventListener('click', () => {
+  box_text.style.display = "block";
+  box_text.style.top = "80vh";
+  box_text.style.left = "45vw";
+     document.getElementById("box_text_h1").textContent="hello 3"
+     document.getElementById("box_text_h1").textContent="hello 3💥"
+
+})
+
+
+
+
+    
+    
+    
+    
+    
+    
   }
 
   function page2() {
