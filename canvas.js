@@ -1,5 +1,6 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
+const clickSound = document.getElementById('clickSound');
 
 // Set canvas size to fill the window
 canvas.width = window.innerWidth;
@@ -22,12 +23,12 @@ function setup() {
         mouse.x = e.clientX;
         mouse.y = e.clientY;
     });
-    // window.addEventListener('touchmove', function(e) {
-    //     e.preventDefault(); // Prevent default touch behavior (like scrolling)
-    //     // updateTouchPosition(e);
-    // });
 
     window.addEventListener('click', function(e) {
+        // Play click sound
+        clickSound.currentTime = 0;
+        clickSound.play();
+
         const burstCount = 20;
         for (let i = 0; i < burstCount; i++) {
             particles.push(createParticle(e.clientX, e.clientY));
