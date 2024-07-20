@@ -1,0 +1,173 @@
+:root {
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+  --red-100-color: #fc415b;
+  --yello-color: #e3ca6a;
+  --red-900-color: #140606;
+}
+@font-face {
+  font-family: font1;
+  src: url(/public/AmericanCaptain-MdEY.ttf);
+}
+@font-face {
+  font-family: font2;
+  src: url(/public/SdAsteroidB612-wo3e2.otf);
+}
+.page1 {
+  width: 100%;
+  height: 100vh;
+  /* background:#000000; */
+  position: relative;
+  /* z-index: 100; */
+  overflow: hidden;
+}
+.page1 .main_video {
+  width: 100vw;
+  height: auto;
+  position: absolute;
+  top: 0;
+  filter: contrast(1.3);
+  -webkit-filter: contrast(1.3);
+}
+.page1 .main_video > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* .navbar{} */
+.nav {
+  z-index: 9999;
+  position: relative;
+  font-family: font1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4vh 3vw;
+  font-size: 2vw;
+}
+.nav a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+.nav a img {
+  width: 20vw;
+}
+.nav a:hover {
+  color: var(--red-100-color);
+  animation: navtext 1s ease forwards;
+  -webkit-animation: navtext 1s ease forwards;
+}
+
+
+.nav .nav-shop {
+  position: absolute;
+  left: 45%;
+  opacity: 0;
+}
+.nav .nav-all {
+  position: absolute;
+  left: 45%;
+  opacity: 0;
+}
+.nav-img {
+  position: absolute;
+  left: 42%;
+  opacity: 0;
+  top: 10px;
+}
+.nav-daily {
+  position: absolute;
+  left: 45%;
+  opacity: 0;
+}
+.nav-more {
+  position: absolute;
+  left: 45%;
+  opacity: 0;
+}
+
+.mobile_nav {
+  display: none;
+}
+.mobile_nav_ {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .page1 .main_video {
+    top: 30px;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .nav {
+    display: none;
+  }
+  .mobile_nav {
+    
+    width: 100%;
+    height: 10vw;
+    display: flex;
+    /* background: #69696991; */
+    backdrop-filter: blur (10px);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+  }
+  .mobile_nav > .left_mobile_nav .left_mobile_nav_img img {
+    scale: 1.3;
+    margin-left: 20px;
+  }
+  .mobile_nav > .right_mobile_nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 6vw;
+    gap: 2vw;
+    position: relative;
+  }
+  .mobile_nav > .right_mobile_nav .nav_line {
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 20px;
+  }
+
+  .mobile_nav_ {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background:#fc415b;
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    right: -100vw;
+  }
+
+  .mobile_nav-_ {
+    width: 100%;
+    height: 100%;
+    /* background: #000; */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobile_nav_box {
+    display: flex;
+    flex-direction: column;
+    gap: 8vw;
+  }
+  .mobile_nav_box > a {
+    font-size: 8vw;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: font1;
+    text-align: center;
+    letter-spacing: 0.6vw;
+  }
+}

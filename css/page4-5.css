@@ -1,0 +1,160 @@
+:root {
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+  --red-100-color: #fc415b;
+  --yello-color: #e3ca6a;
+  --red-900-color: #140606;
+}
+@font-face {
+  font-family: font1;
+  src: url(/public/AmericanCaptain-MdEY.ttf);
+}
+@font-face {
+  font-family: font2;
+  src: url(/public/SdAsteroidB612-wo3e2.ttf);
+}
+
+.page4 {
+    /* background: #000; */
+    width: 100vw;
+    height: 100vh;
+    /* z-index: -1; */
+  }
+  .texts2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .text-121b {
+    color: #e3ca6a;
+    z-index: -9;
+    position: absolute;
+  }
+  .texts12122 {
+    display: none;
+  }
+  .text-aa1 {
+    font-family: font2;
+    font-size: 35vw;
+    font-weight: 900;
+    letter-spacing: 20px;
+  }
+  .texts2 {
+    position: absolute;
+  
+    color: transparent;
+    /* text-shadow: 0px 0px 0px 2px #e3ca6a; */
+    z-index: 12;
+    -webkit-text-stroke: #e3ca6a 1.6px;
+  }
+  .page4img {
+    width: 35vw;
+    position: fixed;
+    filter: contrast(1.6)  ;
+    -webkit-filter: contrast(1.6)  ;
+}
+  .page5{
+    position: relative;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    /* background: linear-gradient(
+      45deg,
+      var(--red-900-color) 35%,
+      var(--primary-color)35%
+    ); */
+    padding: 1.5%;
+  }
+  
+  .top-texts{
+    position: absolute;
+    left: 57vw;
+    font-size: 1.5vw;
+    text-align: center;
+    color: var(--yello-color);
+    font-family: font1;
+    font-weight: 200;
+    letter-spacing: 3px;
+  }
+  .text-70{
+    position: absolute;
+    top: 15vh;
+    left: 55vw;
+    font-family: font1;
+    font-size: 30vw;
+    font-weight: 200;
+    letter-spacing: 3px;
+  }
+  .text-hrs{
+    position: absolute;
+    top: 30vh;
+    left: 79vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 800;
+    font-size: 2vw;
+    letter-spacing: 3px;
+  }
+  .text-fast{
+    position: absolute;
+    top: 70vh;
+    left: 79vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 800;
+    font-size: 2vw;
+    letter-spacing: 3px;
+  }
+  
+
+  .page6{
+    position: relative;
+    z-index: -1;
+    /* background: #421356; */
+    width: 100vw;
+    height: 100vh;
+    /* background: linear-gradient(
+      -45deg,
+      var(--red-900-color) 39.9%,
+      var(--primary-color)40%
+    ); */
+    padding: 1.5%;
+  }
+  .texts6{
+    width: 500px;
+    font-family: font2;
+    font-size: 3vw;
+    color: var(--yello-color);
+    letter-spacing: 3px;
+  }
+  .text360 h1{
+    position: absolute;
+    top: 50vh;
+    left: 5vw;
+    font-family: font2;
+    font-size: 12vw;
+    color: var(--yello-color);
+    letter-spacing: 3px;
+  }
+  .Rectangle62{
+    position: absolute;
+    width: 300px;
+  }
+  .Rectangle63{
+    position: absolute;
+    top:70vh;
+    width: 300px;
+  }
+  @media only screen and (min-height: 768px) {
+    .text-fast {
+      position: absolute;
+      top: 60vh;
+      left: 79vw;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: 800;
+      font-size: 2vw;
+      letter-spacing: 3px;
+    }
+  }
+  
