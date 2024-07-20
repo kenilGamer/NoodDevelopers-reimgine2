@@ -526,7 +526,7 @@ function splittingInit(){
 
 splittingInit();
 
-  // Calling all page functions
+// Calling all page functions
   ls();
   navbar();
   page1();
@@ -537,3 +537,11 @@ splittingInit();
   page6();
   countUps();
 });
+function box(cardNumber) {
+  const card = document.querySelector(`.crad${cardNumber}`);
+  if (card.style.display === 'none' || card.style.display === '') {
+      card.style.display = 'flex';
+  } else {
+      card.style.display = 'none';
+  }
+}
