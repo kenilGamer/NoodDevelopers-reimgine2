@@ -57,17 +57,13 @@
   z-index: -1;
   width: 100vw;
   height: 100vh;
-  /* background: linear-gradient(
-    -45deg,
-    var(--red-900-color) 50%,
-    var(--primary-color) 50%
-  ); */
   padding: 1.5%;
 }
 .page3-a {
   width: 100%;
   height: 100%;
   display: flex;
+  /* background: #e3ca6a; */
 }
 .page3-l {
   width: 60%;
@@ -119,17 +115,13 @@
   z-index: -1;
   width: 100vw;
   height: 100vh;
-  /* background: linear-gradient(
-    -45deg,
-    var(--red-900-color) 40%,
-    var(--primary-color) 40%
-  ); */
+ 
   padding: 1.5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 100px;
-  /* align-items: center; */
+
 }
 .text-about22{
   display: flex;
@@ -137,8 +129,6 @@
   gap: 10px;
   font-family: font2;
   overflow: hidden;
-  /* font-size: 3vw; */
-  /* font-weight: 500; */
 }
 
 .text-about22 h3{
@@ -163,5 +153,69 @@
   .page1img {
     width: 35vw;
     position: fixed;   
+  }
+}
+@media only screen and (max-width: 600px) {
+  .page1img {
+    width: 38vw;
+    position: fixed;   
+  }
+  .page3-a {
+    width: 100%;
+    height: 100%;
+    /* display: flex; */
+    /* background: #e3ca6a; */
+  }
+  .text-aa{
+    font-size: 40vw;
+  }
+
+  .page3-l {
+    width: 100%;
+    height: 100%;
+    top: 40%;
+    /* background: #db2727; */
+    font-family: font2;
+    position: absolute;
+  }
+  .page3-l h1{
+    color: #e3ca6a;
+    font-size: 15vw;
+    opacity: 1;
+    /* text-wrap: nowrap; */
+  }
+  .Cyberstud21 p{
+    font-size: 4vw;
+    opacity: 1;
+  }
+
+
+  .page-about2{
+    position: relative;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    /* background: linear-gradient(
+      -45deg,
+      var(--red-900-color) 40%,
+      var(--primary-color) 40%
+    ); */
+    padding: 1.5%;
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .text-about22{
+    margin-top: -50%;
+    position: relative;
+    left: 20%;
+  }
+  .text-about22 h3{
+    color: #e3ca6a;
+    font-size: 5vw;
+  }
+  .text-about22 p{
+    font-size: 4vw;
   }
 }

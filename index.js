@@ -165,6 +165,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   }
 
   function page2() {
+    const media = window.matchMedia('(max-width: 600px)');
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".page2",
@@ -181,13 +182,25 @@ document.addEventListener("DOMContentLoaded", (event) => {
       opacity: 0,
       scale: 3,
     });
-    tl.to(".page1img", {
-      duration: 3,
-      top: "120%",
-      rotate: 370,
-      left: "55%",
-      scale: 1.5,
-    });
+    if(media.matches){
+      tl.to(".page1img", {
+        duration: 3,
+        top: "120%",
+        rotate: 370,
+        left: "30%",
+        scale: 2,
+      });
+    }
+    else{
+      tl.to(".page1img", {
+        duration: 3,
+        top: "120%",
+        rotate: 370,
+        left: "55%",
+        scale: 1.5,
+      });
+    }
+    
   }
 
   function page3() {
@@ -215,7 +228,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     texts();
     // texts2();
-
+    const media = window.matchMedia('(max-width: 600px)');
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".page3",
@@ -245,12 +258,22 @@ document.addEventListener("DOMContentLoaded", (event) => {
       "-=0.5"
     );
 
-    tl.to(".page1img", {
-      duration: 6,
-      top: "220%",
-      rotate: 20,
-      left: "60%",
-    });
+    if(media.matches){
+      tl.to(".page1img", {
+        duration: 6,
+        top: "220%",
+        rotate: 20,
+        left: "40%",
+        scale:1.5
+      });
+    }else{
+      tl.to(".page1img", {
+        duration: 6,
+        top: "220%",
+        rotate: 20,
+        left: "60%",
+      });
+    }
 
     const tl2 = gsap.timeline({
       scrollTrigger: {
