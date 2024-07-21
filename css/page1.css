@@ -289,19 +289,15 @@
 }
 
 @media (max-width: 600px) {
-  
   .page1 .main_video {
     width: 100%;
     height: 100vh;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-position: center;
     background-image: url("/public/cyberstud_mobile_view_ff5f41fe-f971-42d0-836e-e41967e9dc8a.jpg");
     background-repeat: no-repeat;
     background-size: cover;
   }
-
   .nav {
     display: none;
   }
@@ -346,7 +342,6 @@
     top: 0;
     right: -100vw;
   }
-
   .mobile_nav-_ {
     width: 100%;
     height: 100%;
@@ -356,7 +351,6 @@
     justify-content: center;
     align-items: center;
   }
-
   .mobile_nav_box {
     display: flex;
     flex-direction: column;
@@ -369,5 +363,164 @@
     font-family: font1;
     text-align: center;
     letter-spacing: 0.6vw;
+  }
+  .boxs1 {
+    position: absolute;
+    padding: 2px;
+    top: 26%;
+    left: 47%;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    opacity: 0.7;
+    animation: boxs 0.3s both;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-animation: boxs 5s both infinite;
+  }
+  .box1 {
+    position: absolute;
+    top: 26%;
+    left: 47%;
+    width: 25px;
+    height:25px;
+    background-color: var(--secondary-color);
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d6d6d68e;
+    color: #000000;
+    border-radius: 50%;
+  }
+  .boxs2 {
+    position: absolute;
+    padding: 2px;
+    top: 40%;
+    left: 70%;
+    width:  25px;
+    height: 25px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: boxs 0.3s both;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-animation: boxs 5s both infinite;
+  }
+  .box2 {
+    position: absolute;
+    top: 40%;
+    left: 70%;
+    width:  25px;
+    height: 25px;
+    background-color: var(--secondary-color);
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d6d6d68e;
+    color: #000000;
+    border-radius: 50%;
+  }
+  .boxs3{
+    position: absolute;
+    padding: 2px;
+    top:  60%;
+    left:65%;
+    border-radius: 50%;
+    width:  25px;
+    height: 25px;
+    background-color: var(--secondary-color);
+    opacity: 0.7;
+    animation: boxs 0.3s both;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-animation: boxs 5s both infinite;
+  }
+  .box3{
+    position: absolute;
+    top: 60%;
+    left: 65%;
+    width:  25px;
+    height: 25px;
+    background-color: var(--secondary-color);
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d6d6d68e;
+    color: #000000;
+    border-radius: 50%;
+  }
+  .crad1{
+    position: absolute;
+    top: 15%;
+    left: 11%;
+    width: 450px;
+    height: 200px;
+    background-color: var(--secondary-color);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    animation:  1s ;
+  
+  }
+  .crad2{
+    animation: display 0.5s ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 51%;
+    width: 450px;
+    height: 200px;
+    background-color: var(--secondary-color);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    -webkit-animation: display 0.5s ease-in-out;
+  }
+  .crad3{
+    animation:  1s ;
+    position: absolute;
+    top: 15%;
+    left: 65%;
+    width: 450px;
+    height: 200px;
+    background-color: var(--secondary-color);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+  
   }
 }
