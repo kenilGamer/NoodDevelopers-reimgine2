@@ -15,7 +15,12 @@ document.addEventListener("contextmenu",(event)=>{
     }
   }
 })
+window.addEventListener("load", (e) => {
+  console.log(e);
+});
+                      
 document.addEventListener("DOMContentLoaded", (event) => {
+  // console.log(event);
   function ls() {
     ScrollTrigger.normalizeScroll(true);
     ScrollTrigger.defaults({ ignoreMobileResize: true });

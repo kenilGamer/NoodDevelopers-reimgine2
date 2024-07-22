@@ -1,0 +1,68 @@
+
+.page_13{
+width: 100%;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background: #000000;
+
+}
+.page_13 .page_13_{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.page_13 .page_13_ h1{
+  font-size: 8vw;
+  font-family: font1;
+  width: 70vw;
+  text-align: center;
+  letter-spacing: 0.3vw;
+}
+.page_13 .page_13_ .img_div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.page_13 .page_13_ .img_div img{
+  width: 100%;
+  height: 100%;
+  rotate: 220deg;
+  object-fit: cover;
+  scale: 0.8;
+}
+
+@media (max-width: 600px) {
+  .page_13 .page_13_{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 0 5vw;
+}
+
+.page_13 .page_13_ h1{
+  font-size: 8vw;
+  font-family: font1;
+  width: 70vw;
+  text-align: center;
+  letter-spacing: 0.3vw;
+}
+.page_13 .page_13_ .img_div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.page_13 .page_13_ .img_div img{
+  width: 100%;
+  height: 100%;
+}
+  
+}

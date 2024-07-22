@@ -1,0 +1,64 @@
+.page9{
+  width: 100%;
+  /* min-height: 10 0vh; */
+  height: 100vh;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+}
+.page9 .page_9_{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.page9 .page_9_  .page_9_text h1{
+  font-size: 19vw;
+  font-family: font1;
+  letter-spacing: 1vw;
+  color: #000000;
+  font-weight: 500;
+
+}
+
+.page9 .page_9_  .page_9_text h3{
+  font-size: 4vw;
+  font-family: font1;
+  color: goldenrod;
+  font-weight: 500;
+  word-spacing: 1vw;
+  line-height: 0;
+  
+
+}
+
+.page9 .page_9_img{
+  position: absolute;
+  top: 5vh;
+  height: 20vw;
+  width:40vw;
+  /* scale: 2; */
+  
+}
+.page9-img1{
+  position: absolute;
+  top: 5vh;
+  scale: 1.05;
+}
+.page9-img2{
+  position: absolute;
+  top: 45vh;
+
+}
+.page9 .page_9_img img{
+  width: 100%;
+  height: 100%;
+  /* border-radius: 50%; */
+  
+}
