@@ -190,12 +190,22 @@
   }
   .page3-l h1{
     color: #e3ca6a;
-    font-size: 15vw;
+    font-size: 12vw;
+    text-align: center;
+    opacity: 1;
+    /* text-wrap: nowrap; */
+  }
+  .page3-l p{
+    margin-left: 20px;
+    width: 300px;
+    font-size: 5vw;
+    /* text-align: center; */
     opacity: 1;
     /* text-wrap: nowrap; */
   }
   .Cyberstud21 p{
     font-size: 4vw;
+    
     opacity: 1;
   }
 

@@ -391,6 +391,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       },
     });
 
+    const media = window.matchMedia('(max-width: 600px)');
     tl.from(
       ".top-text span",
       {
@@ -434,6 +435,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
       },
       "a"
     );
+    if(media.matches){
+    tl.to(".page4img", {
+      duration: 3,
+      top: "220%",
+      rotate: 370,
+      left: "30%",
+      scale: 2,
+    });
+  }else{
     tl.to(".page4img", {
       duration: 3,
       top: "215%",
@@ -441,6 +451,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       left: "50%",
       scale: 1.2,
     });
+  }
   }
 
   function countUps() {

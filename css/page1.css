@@ -158,16 +158,19 @@
   color: #000000;
   border-radius: 50%;
 }
+
 .crad1{
+  z-index: 600000;
   position: absolute;
   top: 15%;
   left: 11%;
   width: 450px;
-  height: 200px;
+  height: 150px;
   background-color: var(--secondary-color);
   display: none;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
+  padding: 1%;
   border-radius: 25px;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
@@ -177,15 +180,15 @@
 
 }
 .crad2{
+  z-index: 600001;
   animation: display 0.5s ease-in-out;
   position: absolute;
   top: 50%;
   left: 51%;
   width: 450px;
-  height: 200px;
+  height:150px;
   background-color: var(--secondary-color);
   display: none;
-  align-items: center;
   justify-content: center;
   border-radius: 25px;
   -webkit-border-radius: 25px;
@@ -195,15 +198,15 @@
   -webkit-animation: display 0.5s ease-in-out;
 }
 .crad3{
+  z-index: 60002;
   animation:  1s ;
   position: absolute;
   top: 15%;
   left: 65%;
   width: 450px;
-  height: 200px;
+  height: 150px;
   background-color: var(--secondary-color);
   display: none;
-  align-items: center;
   justify-content: center;
   border-radius: 25px;
   -webkit-border-radius: 25px;
@@ -213,7 +216,65 @@
 
 }
 .crad1-texts{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding: 10px;
   color: #000000;
+}
+.crad1-texts h1{
+  font-size: 2vw;
+  font-family: font2;
+  color: #000000;
+}
+
+.crad1-texts p{
+  font-size: 1.3vw;
+  width: 300px;
+  font-family: font2;
+}
+
+.crad2-texts{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding: 10px;
+  color: #000000;
+}
+
+.crad2-texts h1{
+  font-size: 2vw;
+  font-family: font2;
+}
+
+.crad2-texts p{
+  font-size: 1.3vw;
+  width: 300px;
+  font-family: font2;
+}
+.crad3-texts{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding: 10px;
+  color: #000000;
+}
+
+.crad3-texts h1{
+  font-size: 2vw;
+  font-family: font2;
+}
+
+.crad3-texts p{
+  font-size: 1.3vw;
+  width: 300px;
+  font-family: font2;
 }
 @keyframes boxs {
   0% {
@@ -496,10 +557,10 @@
     top: 70%;
     left: 11%;
     width: 300px;
-    height: 200px;
+    height: 150px;
     background-color: var(--secondary-color);
     display: none;
-    align-items: center;
+
     justify-content: center;
     border-radius: 25px;
     -webkit-border-radius: 25px;
@@ -514,11 +575,11 @@
     position: absolute;
     top: 70%;
     left: 11%;
-    width: 450px;
-    height: 200px;
+    width: 300px;
+    height:150px;
     background-color: var(--secondary-color);
     display: none;
-    align-items: center;
+
     justify-content: center;
     border-radius: 25px;
     -webkit-border-radius: 25px;
@@ -532,11 +593,10 @@
     position: absolute;
     top: 70%;
     left: 11%;
-    width: 450px;
-    height: 200px;
+    width: 300px;
+    height: 150px;
     background-color: var(--secondary-color);
     display: none;
-    align-items: center;
     justify-content: center;
     border-radius: 25px;
     -webkit-border-radius: 25px;
@@ -544,5 +604,66 @@
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
   
+  }
+  .crad1-texts{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 10px;
+    color: #000000;
+  }
+  .crad1-texts h1{
+    font-size: 5vw;
+    font-family: font2;
+    color: #000000;
+  }
+  
+  .crad1-texts p{
+    font-size: 4vw;
+    width: 200px;
+    font-family: font2;
+  }
+  
+  .crad2-texts{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 10px;
+    color: #000000;
+  }
+  
+  .crad2-texts h1{
+    font-size: 5vw;
+    font-family: font2;
+  }
+  
+  .crad2-texts p{
+    font-size: 4vw;
+    width: 200px;
+    font-family: font2;
+  }
+  .crad3-texts{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 10px;
+    color: #000000;
+  }
+  
+  .crad3-texts h1{
+    font-size: 5vw;
+    font-family: font2;
+  }
+  
+  .crad3-texts p{
+    font-size: 4vw;
+    width: 200px;
+    font-family: font2;
   }
 }
