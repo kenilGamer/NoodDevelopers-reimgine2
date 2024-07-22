@@ -753,11 +753,12 @@ function page11(){
       // pin: true,
     },
   });
-  tl.from(".page_11_text",{
+  tl.from(".page11text span",{
     duration: 1,
-    scale: 0.5,
-    // backgroundColor:"#000"
-  },"b")
+    y: 100,
+    opacity: 0,
+    stagger: 0.2,
+  },)
 }
 // Calling all page functions
   ls();

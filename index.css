@@ -48,6 +48,7 @@
     pointer-events: none;
   }
   .split-text{
+    
     display: inline-block;
   }
   .nav {
@@ -99,7 +100,7 @@
     display:inline-block;
     overflow: hidden;
   }
-  .Cyberstud21 span{
+  .Cyberstud21 span,.page11text span{
     display:inline-block;
     letter-spacing: -11px;
     transform-style:preserve-3d;
