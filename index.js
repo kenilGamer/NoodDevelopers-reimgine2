@@ -577,7 +577,7 @@ tl.from(
 if (media.matches) {
 
   tl.to("#right-earbuds", {
-    top: "260%",
+    top: "130%",
     left: "30%",
     width: "30%",
   });
