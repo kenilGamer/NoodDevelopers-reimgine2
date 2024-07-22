@@ -47,7 +47,9 @@
     position: fixed;
     pointer-events: none;
   }
-  
+  .split-text{
+    display: inline-block;
+  }
   .nav {
     z-index: 100; /* Lower than cursor z-index */
     position: relative;

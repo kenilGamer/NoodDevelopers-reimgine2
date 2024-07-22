@@ -15,12 +15,40 @@ document.addEventListener("contextmenu",(event)=>{
     }
   }
 })
-window.addEventListener("load", (e) => {
-  console.log(e);
-});
+
                       
 document.addEventListener("DOMContentLoaded", (event) => {
   // console.log(event);
+
+
+
+  function splitString(str){
+    let splittedTextHtml='',generatedHTML='';
+    let string = str.textContent;
+    let i;
+    for(i=0;i<string.length;i++){
+      splittedTextHtml += `
+      <span char="${string[i]}" style="--totalChars:${string.length};--index:${i};--delay:${i*100}ms;--duration:${string.length*100}ms">
+      ${string[i]}
+      </span>`;
+    }
+    
+    generatedHTML = `<div>${splittedTextHtml}</div>`
+    str.innerHTML = generatedHTML;
+  }
+  
+  function splittingInit(){
+    let splitCharArr = document.querySelectorAll('.split-text');
+    splitCharArr.forEach((str)=>{
+    splitString(str);
+  })
+  }
+  
+  splittingInit();
+  
+  
+
+
   function ls() {
     ScrollTrigger.normalizeScroll(true);
     ScrollTrigger.defaults({ ignoreMobileResize: true });
@@ -517,30 +545,6 @@ function disintegrate(event){
   }
 }
 
-function splitString(str){
-  let splittedTextHtml='',generatedHTML='';
-  let string = str.textContent;
-  let i;
-  for(i=0;i<string.length;i++){
-    splittedTextHtml += `
-    <span char="${string[i]}" style="--totalChars:${string.length};--index:${i};--delay:${i*100}ms;--duration:${string.length*100}ms">
-    ${string[i]}
-    </span>`;
-  }
-  
-  generatedHTML = `<div>${splittedTextHtml}</div>`
-  str.innerHTML = generatedHTML;
-}
-
-function splittingInit(){
-  let splitCharArr = document.querySelectorAll('.split-text');
-  splitCharArr.forEach((str)=>{
-  splitString(str);
-})
-}
-
-splittingInit();
-
 
 function page7(){
   
@@ -670,6 +674,91 @@ tl2.from(".quick h1", {
 });
 
 }
+
+function page8(){
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".page8",
+      scroller: "#main",
+      toggleActions: "restart none none reverse",
+      start: "top 00%",
+      end: "top -100%",
+      scrub: 5,
+      pin: true,
+    },
+  });
+  tl.from(".page8h1 span", {
+    y: 100,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
+  })
+  tl.from(".page8p span", {
+    y: 100,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
+  })
+
+  tl.from(".page_8_imgs", {
+    duration: 1,
+    y:500,
+    opacity: 0
+  });
+}
+
+function page9(){
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".page9",
+      scroller: "#main",
+      toggleActions: "restart none none reverse",
+      start: "top 00%",
+      end: "top -100%",
+      scrub: 5,
+      pin: true,
+    },
+  });
+  tl.to(".page9-img1", {
+    duration: 1,
+    y: -500,
+  },'a')
+  tl.to(".page9-img2", {
+    duration: 1,
+    y: 1000,
+  },'a')
+  tl.to(".page_9_text",{
+    duration: 1,
+    scale: 9,
+    // backgroundColor:"#000"
+  },"b")
+  tl.to(".page9",{
+    duration: 1,
+    // scale: 9,
+    backgroundColor:"#000"
+  },"b")
+
+}
+
+
+function page11(){
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".page_11",
+      scroller: "#main",
+      toggleActions: "restart none none reverse",
+      start: "top 50%",
+      end: "top -10%",
+      scrub: 5,
+      // pin: true,
+    },
+  });
+  tl.from(".page_11_text",{
+    duration: 1,
+    scale: 0.5,
+    // backgroundColor:"#000"
+  },"b")
+}
 // Calling all page functions
   ls();
   navbar();
@@ -680,6 +769,11 @@ tl2.from(".quick h1", {
   page5();
   page6();
   page7();
+  page8();
+  page9(); 
+
+  page11()
+  
   countUps();
 });
 function box(cardNumber) {

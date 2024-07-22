@@ -1,4 +1,4 @@
-.page8{
+.page8 {
   width: 100%;
   min-height: 100vh;
   height: 100vh;
@@ -7,50 +7,60 @@
   align-items: center;
   justify-content: center;
   position: relative;
-      overflow: hidden;
+  overflow: hidden;
 }
-.page8 .page_8_{
+
+.page8 .page_8_ {
   width: 100%;
   height: 100%;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-
-.page8 .page_8_  .page_8_text h1{
+.page_8_text{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.page8 .page_8_text h1 {
   font-size: 18vw;
   font-family: font1;
   letter-spacing: 1vw;
   color: #000000;
   font-weight: 500;
-
 }
 
-.page8 .page_8_  .page_8_text h3{
+.page8 .page_8_text p {
   font-size: 4vw;
   font-family: font1;
   color: goldenrod;
   font-weight: 500;
   word-spacing: 1vw;
   line-height: 0;
-  
-
 }
 
-.page8 .page_8_img{
+.page8 .page_8_img {
   position: absolute;
   height: 20vw;
-  width:20vw;
-  scale: 3;
-    z-index: 100000;
-
+  width: 20vw;
+  transform: scale(3);
+  z-index: 100000;
 }
-.page8 .page_8_img img,.page8 .page_8_img video{
+
+.page8 .page_8_img img,
+.page8 .page_8_img video {
   width: 100%;
   height: 100%;
-    position: fixed;
-
+  position: fixed;
 }
 
-
+.page8h1 span,
+.page8p span {
+  display: inline-block;
+}
