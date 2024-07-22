@@ -212,6 +212,9 @@
   -o-border-radius: 25px;
 
 }
+.crad1-texts{
+  color: #000000;
+}
 @keyframes boxs {
   0% {
    scale: 1.5;
@@ -364,6 +367,25 @@
     text-align: center;
     letter-spacing: 0.6vw;
   }
+  .text-page1_ h1 {
+    position: absolute;
+    top: 3%;
+    left: 30%;
+    font-family: font1;
+    font-size: 6vw;
+    letter-spacing: 5px;
+    width: 50%;
+    color: var(--secondary-color);
+  }
+  .text-page1_ p {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3vw;
+    width: 50%;
+    color: var(--secondary-color);
+  }
   .boxs1 {
     position: absolute;
     padding: 2px;
@@ -471,9 +493,9 @@
   }
   .crad1{
     position: absolute;
-    top: 15%;
+    top: 70%;
     left: 11%;
-    width: 450px;
+    width: 300px;
     height: 200px;
     background-color: var(--secondary-color);
     display: none;
@@ -490,8 +512,8 @@
   .crad2{
     animation: display 0.5s ease-in-out;
     position: absolute;
-    top: 50%;
-    left: 51%;
+    top: 70%;
+    left: 11%;
     width: 450px;
     height: 200px;
     background-color: var(--secondary-color);
@@ -508,8 +530,8 @@
   .crad3{
     animation:  1s ;
     position: absolute;
-    top: 15%;
-    left: 65%;
+    top: 70%;
+    left: 11%;
     width: 450px;
     height: 200px;
     background-color: var(--secondary-color);

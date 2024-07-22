@@ -1,5 +1,21 @@
+document.addEventListener("contextmenu",(event)=>{
+  event.preventDefault();
+  const target = event.target;
+  if (target.tagName === "A" && target.getAttribute("href")!== "#") {
+    const link = new URL(target.getAttribute("href"), document.location.href);
+    const hash = link.hash;
+    if (hash) {
+      gsap.to(window, {
+        duration: 0.5,
+        scrollTo: {
+          y: hash,
+          offsetY: -100,
+        },
+      });
+    }
+  }
+})
 document.addEventListener("DOMContentLoaded", (event) => {
-  // Locomotive Scroll initialization and ScrollTrigger setup
   function ls() {
     ScrollTrigger.normalizeScroll(true);
     ScrollTrigger.defaults({ ignoreMobileResize: true });
@@ -11,8 +27,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
       inertia: 0.7,
       multiplier: 0.7,
     }); 
-
-    // Navigation links scroll animation
     locoScroll.on("scroll", ScrollTrigger.update);
     ScrollTrigger.scrollerProxy("#main", {
       scrollTop(value) {
@@ -214,18 +228,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
       });
       h1.innerHTML = clutter;
     }
-
-    // function texts2() {
-    //   let h1 = document.querySelector(".Cyberstud21");
-    //   let texts = h1.textContent;
-    //   let splittedText = texts.split("");
-    //   let clutter = "";
-    //   let letters = splittedText.forEach((elem) => {
-    //     clutter += `<span class='newtext'>${elem}</span>`;
-    //   });
-    //   h1.innerHTML = clutter;
-    // }
-
     texts();
     // texts2();
     const media = window.matchMedia('(max-width: 600px)');
@@ -498,9 +500,6 @@ function disintegrate(event){
     this.event.target.children[i].classList.add('disintegrate');
   }
 }
-
-
-
 
 function splitString(str){
   let splittedTextHtml='',generatedHTML='';
