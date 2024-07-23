@@ -36,7 +36,7 @@
   align-items: end;
   position: absolute;
   z-index: 99999;
-  scale: 0.90;
+  scale: 1.05;
 }
 .page9 .page_9_ .page_9_img .page9-img2{
   width: 100%;
@@ -88,3 +88,26 @@
     z-index: 99999;
   }
 } */
+@media only screen and (min-height: 768px) {
+  .page9 .page_9_ .page_9_img .page9-img1{
+    width: 100%;
+    height: 50%;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: absolute;
+    z-index: 99999;
+    scale: 1.05;
+  }
+  .page9 .page_9_ .page_9_img .page9-img2{
+    width: 100%;
+    height: 50%;
+    top: 390px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: absolute;
+    z-index: 99999;
+  }
+}

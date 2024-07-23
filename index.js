@@ -16,12 +16,28 @@ document.addEventListener("contextmenu",(event)=>{
   }
 })
 
-                      
+window.addEventListener("load", function () {
+  const loader = document.querySelector(".loader");
+  const body = document.body;
+
+  // Prevent scrolling
+  body.classList.add("no-scroll");
+
+  setTimeout(() => {
+    loader.style.transform = "scale(100)";
+    loader.style.opacity = "0";
+  }, 2000);
+
+  loader.addEventListener("transitionend", () => {
+    loader.style.display = "none";
+    // Allow scrolling again
+    body.classList.remove("no-scroll");
+  });
+});
+
+                   
 document.addEventListener("DOMContentLoaded", (event) => {
-  // console.log(event);
-
-
-
+  
   function splitString(str){
     let splittedTextHtml='',generatedHTML='';
     let string = str.textContent;

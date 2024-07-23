@@ -226,4 +226,29 @@
     align-items: center;
     justify-content: center;
     z-index: 999999;
-  }
+    pointer-events: none;
+    transition: all 5s;
+    -webkit-transition: all 5s;
+    -moz-transition: all 5s;
+    -ms-transition: all 5s;
+    -o-transition: all 5s;
+}
+
+footer{
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--red-100-color);
+
+  color: var(--secondary-color);
+  padding: 10px;
+  text-align: center;
+}
+.no-scroll {
+  overflow: hidden;
+}
