@@ -759,6 +759,36 @@ function page11(){
     opacity: 0,
     stagger: 0.2,
   },)
+  gsap.from(".page12text span",{
+    duration: 1,
+    y: 100,
+    opacity: 0,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".page_12",
+      scroller: "#main",
+      toggleActions: "restart none none reverse",
+      start: "top 50%",
+      end: "top -10%",
+      scrub: 5,
+      // pin: true,
+    },
+  },)
+  gsap.from(".page13text span",{
+    duration: 1,
+    y: 100,
+    opacity: 0,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".page_13",
+      scroller: "#main",
+      toggleActions: "restart none none reverse",
+      start: "top 50%",
+      end: "top -10%",
+      scrub: 5,
+      // pin: true,
+    },
+  },)
 }
 // Calling all page functions
   ls();

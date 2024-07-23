@@ -21,7 +21,7 @@ background: #000000;
   font-family: font1;
   width: 70vw;
   text-align: center;
-  letter-spacing: 0.3vw;
+  letter-spacing: -4px;
 }
 .page_13 .page_13_ .img_div{
   display: flex;
@@ -44,15 +44,16 @@ background: #000000;
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
-  padding: 0 5vw;
+  padding: 0 2vw;
 }
 
 .page_13 .page_13_ h1{
-  font-size: 8vw;
+  font-size: 7vw;
   font-family: font1;
-  width: 70vw;
+  width: 90vw;
   text-align: center;
-  letter-spacing: 0.3vw;
+  text-wrap: nowrap;
+  letter-spacing: -1px;
 }
 .page_13 .page_13_ .img_div{
   display: flex;

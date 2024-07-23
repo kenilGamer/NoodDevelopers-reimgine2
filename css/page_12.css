@@ -23,7 +23,7 @@ background: #000000;
   font-family: font1;
   width: 70vw;
   text-align: center;
-  letter-spacing: 0.3vw;
+  letter-spacing: -1px;
 }
 .page_12 .page_12_ .img_div{
   display: flex;
@@ -45,16 +45,19 @@ background: #000000;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  overflow: hidden;
-  padding: 0 5vw;
+  /* overflow: hidden; */
+  /* padding: 0 1vw; */
 }
 
 .page_12 .page_12_ h1{
-  font-size: 8vw;
+  padding: 0px;
+
+  font-size: 7vw;
   font-family: font1;
-  width: 70vw;
+  width: 90vw;
+  letter-spacing: -1px;
   text-align: center;
-  letter-spacing: 0.3vw;
+  /* letter-spacing: 0vw; */
 }
 .page_12 .page_12_ .img_div{
   display: flex;

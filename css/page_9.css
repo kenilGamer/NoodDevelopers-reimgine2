@@ -36,7 +36,7 @@
   align-items: end;
   position: absolute;
   z-index: 99999;
-  scale: 1.1;
+  scale: 0.90;
 }
 .page9 .page_9_ .page_9_img .page9-img2{
   width: 100%;
@@ -65,13 +65,26 @@
   word-spacing: 1vw;
   line-height: 0;
 }
-@media only screen and (max-width: 600px) {
- 
-  .page9-img1{
+/* @media only screen and (max-width: 600px) {
+  .page9 .page_9_ .page_9_img .page9-img1{
+    width: 100%;
+    height: 50%;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
     position: absolute;
-    top: 100vh;
-    background: #000000;
-    scale: 1.05;
-    z-index: 999;
+    z-index: 99999;
+    scale: 0.90;
   }
-}
+  .page9 .page_9_ .page_9_img .page9-img2{
+    width: 100%;
+    height: 50%;
+    top: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: absolute;
+    z-index: 99999;
+  }
+} */

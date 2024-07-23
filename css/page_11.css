@@ -41,6 +41,19 @@ background: #000000;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 0 5vw;
+  padding: 0 1vw;
+}
+.page_11 .page_11_ h1{
+  font-size:5vw;
+  font-family: font1;
+  width: 100vw;
+  text-align: center;
+  letter-spacing: 0.3vw;
+}
+.page11text span{
+  display:inline-block;
+  letter-spacing: -1px;
+  transform-style:preserve-3d;
+  transform-origin:bottom;
 }
 }
