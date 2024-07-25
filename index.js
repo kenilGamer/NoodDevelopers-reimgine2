@@ -802,7 +802,7 @@ function page11(){
   },)
 }
 // Calling all page functions
-  ls();
+  // ls();
   navbar();
   page1();
   page2();
