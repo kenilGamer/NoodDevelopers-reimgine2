@@ -62,10 +62,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   
   splittingInit();
   
-  
-
-
-  function ls() {
     ScrollTrigger.normalizeScroll(true);
     ScrollTrigger.defaults({ ignoreMobileResize: true });
     gsap.registerPlugin(ScrollTrigger);
@@ -97,7 +93,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
     ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
     ScrollTrigger.refresh();
-  }
 
   // Navbar animation function
   function navbar() {
